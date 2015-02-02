@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/** 
 	 *
@@ -435,7 +435,7 @@ class CcPopUp {
 			$sent = wp_mail(
 				$to_email,
 				__('You have a new subscriber!', $this->plugin_slug),
-				sprintf(__("Hello,\n\nA new user has subscribed through: %s.\n\nSubscriber's email: %s",get_bloginfo('url'), $this->plugin_slug), $_POST['email']) 
+				sprintf(__("Hello,\n\nA new user has subscribed through: %s.\n\nSubscriber's email: %s", $this->plugin_slug), get_bloginfo('url'), $_POST['email']) 
 			);
 
 			if($sent) {

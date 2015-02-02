@@ -86,7 +86,7 @@
     background-color: #000;
 }
 .pop-up-cc .cc-pu-thank-you p{ 
-	color:#fff;
+	color:#fff !important;
 }
 
 .pop-up-cc .cc-pu-thank-you:after {  

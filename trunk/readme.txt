@@ -5,7 +5,7 @@ Contributors: chopchoporg
 Tags: pop-up, pop up, modal, modal window
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -166,6 +166,8 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 == Changelog ==
 
+= 1.0.1 =
+Fix: newsletter signup form
 
 = 1.0.0 =
 First release
