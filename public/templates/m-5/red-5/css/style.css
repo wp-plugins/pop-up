@@ -89,7 +89,7 @@
 }
 
 .pop-up-cc .cc-pu-thank-you p{ 
-	color:#000;
+	color:#000 !important;
 }
 
 .pop-up-cc .cc-pu-thank-you:after {  
