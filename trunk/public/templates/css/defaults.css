@@ -106,9 +106,9 @@
   display: none !important;
 }
 .pop-up-cc button {
-  border: none;
-  outline: none;
-  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
 }
  
 

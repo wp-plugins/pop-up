@@ -70,17 +70,17 @@
 /*** Form ***/
 
 .linen-5 .cc-pu-form-control {
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
-  font-family: 'Lora', serif;
+  border: 1px solid #e0e0e0 !important;
+  background-color: #fff !important;
+  font-family: 'Lora', serif !important;
 }
 .linen-5 .cc-pu-smart-form .cc-pu-btn {
-  background-color: #514b31;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  top:7px;
-  font-family: 'Lora', serif;
+  background-color: #514b31 !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  top:6px !important;
+  font-family: 'Lora', serif !important;
 }
 
 .pop-up-cc .cc-pu-thank-you {

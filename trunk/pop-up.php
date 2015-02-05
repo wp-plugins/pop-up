@@ -11,7 +11,7 @@
  * Plugin Name:       Pop-Up CC
  * Plugin URI:        http://shop.chop-chop.org
  * Description:       An elegant Pop Up in just a few clicks.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Chop-Chop.org
  * Author URI:        http://chop-chop.org
  * Text Domain:       cc-pop-up-locale
@@ -32,7 +32,7 @@ define( 'CC_PU_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
  * Public-Facing Functionality
  *----------------------------------------------------------------------------*/
 
-require_once( plugin_dir_path( __FILE__ ) . 'public/class-cc-pop-up.php' ); 
+require_once( plugin_dir_path( __FILE__ ) . 'public/class-chch-pop-up.php' ); 
 
 
 /*
@@ -57,7 +57,7 @@ add_action( 'plugins_loaded', array( 'CcPopUp', 'get_instance' ) );
 	
 if (is_admin()) { 
 	
-	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-cc-pop-up-admin.php' );
+	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-chch-pop-up-admin.php' );
 	add_action( 'plugins_loaded', array( 'CcPopUpAdmin', 'get_instance' ) );
 
 }

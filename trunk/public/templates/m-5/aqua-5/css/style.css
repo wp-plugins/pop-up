@@ -67,6 +67,7 @@
   color: inherit;
   font-family: 'Roboto', sans-serif !important;
 	color: #989898 !important;
+	padding:0 !important;
 }
 
 /*** Privacy ***/
@@ -80,23 +81,27 @@
 /*** Form ***/
 
 .aqua-5 .cc-pu-form-control {
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+  border: 1px solid #e0e0e0 !important;
+  background-color: #fff !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 .aqua-5 .cc-pu-smart-form .cc-pu-btn {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #59d5ef;
-  color: #fff;
-  padding: 15px 35px 14px 35px;
-  top:5px;
-  font-weight: 700;
+  -moz-border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  background-color: #59d5ef !important;
+  color: #fff !important;
+  padding: 15px 35px 15px 35px !important;
+  top:4px !important;
+  font-weight: 700 !important;
 }
 
 .pop-up-cc .cc-pu-thank-you {
     background-color: #59d5ef;
+}
+
+.pop-up-cc .cc-pu-thank-you {
+    color:#fff !important;
 }
 
 .pop-up-cc .cc-pu-thank-you:after {  
