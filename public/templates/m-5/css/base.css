@@ -72,7 +72,8 @@
 
 .m-5 .modal-inner p {
   margin-top: 1.78571em;
-  line-height: 1.75;
+  line-height: 1.75 !important;
+  padding: 0 !important;
 }
 
 /*** Privacy ***/
@@ -91,22 +92,22 @@
 }
 .m-5 .cc-pu-privacy-info p {
   float: right;
-  margin: 0;
-  font-size: 0.85714em;
-  position: relative;
-  padding-left: 13px;
+  margin: 0 !important;
+  font-size: 0.85714em !important;
+  position: relative !important;
+  padding-left: 13px !important;
 }
 
 /*** Form ***/
 
 .m-5 .cc-pu-form-control {
-  width: 100%;
-  height: 58px;
-  padding: 0 135px 0 60px;
-  color: #a3a3a3;
-  font-weight: 400;
-  font-size: 1.14286em;
-  box-shadow:none;
+  width: 100% !important;
+  height: 58px !important;
+  padding: 0 135px 0 60px !important;
+  color: #a3a3a3 !important;
+  font-weight: 400 !important;
+  font-size: 1.14286em !important;
+  box-shadow:none !important;
 }
 .m-5 .cc-pu-newsletter-form {
   margin-top: 30px;
@@ -260,7 +261,7 @@
     }
 
     .pop-up-cc .cc-pu-thank-you p, .pop-up-cc .cc-pu-error-message p {
-        line-height: 49px;
+        line-height: 49px !important;
         margin: 0;
     }
 

@@ -1,6 +1,6 @@
 <?php $templates = $this->get_templates(); ?>
-<?php $active = get_post_meta(get_the_ID(),'_cc_pop_up_template', true) ? get_post_meta(get_the_ID(),'_cc_pop_up_template', true) : 'white-5';?>
-<?php $base = get_post_meta(get_the_ID(),'_cc_pop_up_template_base', true) ? get_post_meta(get_the_ID(),'_cc_pop_up_template_base', true) : 'm-5';?> 
+<?php $active = get_post_meta(get_the_ID(),'_chch_pop_up_template', true) ? get_post_meta(get_the_ID(),'_chch_pop_up_template', true) : 'white-5';?>
+<?php $base = get_post_meta(get_the_ID(),'_chch_pop_up_template_base', true) ? get_post_meta(get_the_ID(),'_chch_pop_up_template_base', true) : 'm-5';?> 
 <style> 
 
 	.cc-pu-tab-2,.hide-section {
@@ -110,7 +110,7 @@
 	</div>
 </div>
  
-<input type="hidden" name="_cc_pop_up_template" id="_cc_pop_up_template" value="<?php echo $active; ?>"/>
-<input type="hidden" name="_cc_pop_up_template_base" id="_cc_pop_up_template_base" value="<?php echo $base; ?>"/>
-<?php wp_nonce_field('cc_pu_save_nonce_'.get_the_ID(),'cc_pu_save_nonce'); ?>
+<input type="hidden" name="_chch_pop_up_template" id="_chch_pop_up_template" value="<?php echo $active; ?>"/>
+<input type="hidden" name="_chch_pop_up_template_base" id="_chch_pop_up_template_base" value="<?php echo $base; ?>"/>
+<?php wp_nonce_field('chch_pu_save_nonce_'.get_the_ID(),'chch_pu_save_nonce'); ?>
  
