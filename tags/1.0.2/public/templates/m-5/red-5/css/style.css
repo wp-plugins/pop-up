@@ -1,0 +1,107 @@
+/*** Base ***/
+
+.red-5 a, .red-5 a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+/*** General ***/
+
+.red-5.pop-up-cc {
+  color: #fff;  
+}
+.red-5 .modal-inner {
+  background: #ea3434;
+  font-family: 'Signika', sans-serif;
+}
+
+
+/*** Close Button ***/
+
+.red-5 .cc-pu-close {
+  right: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  z-index: 50;
+  background-color: #fff;
+}
+.red-5 .cc-pu-close i {
+  color: #090909;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.red-5 .modal-inner h2 {
+  color: #fff;
+  font-weight: 700 !important;
+  font-size: 2.5em !important;
+  line-height: 1.1 !important;
+  margin-top: 0.85714em !important;
+  margin-bottom: 0.92857em !important;
+  font-family: 'Signika', sans-serif !important;
+}
+
+/*** Secondary ***/
+
+.red-5 .modal-inner h3 {
+  color: #fff !important;
+  font-size: 1.42857em !important;
+  font-weight: 300 !important;
+  font-family: 'Signika', sans-serif !important;
+}
+
+/*** Content ***/
+
+.red-5 .modal-inner p {
+  color: #fff !important;
+  font-weight: 300 !important;
+  font-family: 'Signika', sans-serif !important;
+}
+
+/*** Privacy ***/
+
+.red-5 .cc-pu-privacy-info a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/*** Form ***/
+
+.red-5 .cc-pu-form-control {
+  border: none;
+  background-color: #fff;
+  font-family: "Signika", sans-serif;
+}
+.red-5 .cc-pu-smart-form .cc-pu-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Signika", sans-serif;
+  text-transform: uppercase;
+  top:7px;
+}
+
+.pop-up-cc .cc-pu-thank-you {
+    background-color: #fff;
+	color:#fff;
+}
+
+.pop-up-cc .cc-pu-thank-you p{ 
+	color:#000 !important;
+}
+
+.pop-up-cc .cc-pu-thank-you:after {  
+     border-top: 8px solid #fff; 
+}
+
+@media only screen and (min-width: 768px) {
+	  
+
+   .pop-up-cc  .cc-pu-thank-you:after {  
+      border-bottom: 8px solid #fff;   
+	  border-top: none;	
+    }
+}
+
