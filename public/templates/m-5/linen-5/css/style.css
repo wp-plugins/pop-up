@@ -42,6 +42,7 @@
   margin-top: 6px !important;
   margin-bottom: 35px !important;
   color: #090909 !important;
+  text-transform: none !important;
   font-family: 'Lora', serif !important;
 }
 
@@ -49,6 +50,7 @@
 
 .linen-5 .modal-inner h3 {
   font-size: 1.42857em !important;
+  line-height: 1.5em !important;
   font-weight: 400 !important;
   color: #514b31 !important;
   font-family: 'Lora', serif !important;

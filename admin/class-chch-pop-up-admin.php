@@ -43,7 +43,7 @@ class CcPopUpAdmin {
 		
 		// Register Post Type Meta Boxes and fields
 		add_action( 'init', array( $this, 'cc_pu_initialize_cmb_meta_boxes'), 9999 );
-		add_action( 'cmb_render_pages_select', array( $this, 'cc_pu_render_pages_select'), 10, 5  );
+		add_action( 'cmb_render_pages_select', array( $this, 'cc_pu_render_pages_select'), 10, 5  ); 
 		add_filter( 'cmb_meta_boxes', array( $this, 'cc_pu_posttype_metaboxes') );
 		
 		add_action('add_meta_boxes_chch-pop-up', array( $this, 'cc_pu_metabox' ));
@@ -69,12 +69,26 @@ class CcPopUpAdmin {
 		add_action( 'wp_ajax_cc_pu_load_preview_module', array( $this, 'cc_pu_load_preview_module'  )); 
 	} 
 	
+	
+	/**
+	 * Register tineMce event
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
 	function cc_pu_tinymce_keyup_event() {
 		 if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) { 
 			  add_filter( 'mce_external_plugins', array( $this, 'cc_pu_tinymce_event') );
 		 }
 	}
-  
+  	
+	
+	/**
+	 * Add keyup to tineMce
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
 	function cc_pu_tinymce_event($plugin_array) { 
 		$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce.js';
   
@@ -141,7 +155,7 @@ class CcPopUpAdmin {
 			</select>	 
 		<?php  
 		 
-	}
+	} 
 	
 	/**
 	 * Return an instance of this class.
@@ -328,7 +342,7 @@ class CcPopUpAdmin {
 					'desc'    => __( '', $domain  ),
 					'id'   => $prefix . 'auto_closed',
 					'type' => 'checkbox', 
-				),  
+				),   
 			),
 
 		); 	

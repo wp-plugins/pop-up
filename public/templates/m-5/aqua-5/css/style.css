@@ -45,6 +45,7 @@
   font-weight: 300 !important; 
   color: #090909 !important;
   font-family: 'Roboto', sans-serif !important;
+  text-transform: none !important;
 }
 .aqua-5 .modal-inner h2 strong {
   font-weight: 700 !important;
@@ -55,6 +56,7 @@
 
 .aqua-5 .modal-inner h3 {
   font-size: 1.42857em !important;
+  line-height: 1.5em !important;
   font-weight: 700 !important;
   color: inherit !important;
   color: #090909 !important;

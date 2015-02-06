@@ -324,11 +324,10 @@ class CcPopUp {
 				if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css')){
 					wp_enqueue_style('style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');  
 					  
-				} 
-				
-				 
+				}   
 			}
-		}		
+		}	
+			
 	} 
 	
 	
