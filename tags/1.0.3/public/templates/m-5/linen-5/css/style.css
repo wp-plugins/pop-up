@@ -1,0 +1,103 @@
+/*** Base ***/
+
+.linen-5 a, .linen-5 a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+/*** General ***/
+
+.linen-5.pop-up-cc {
+  color: #090909;
+}
+.linen-5 .modal-inner {
+  background: #efede7;
+  font-family: 'Lora', serif;
+}
+
+
+
+/*** Close Button ***/
+
+.linen-5 .cc-pu-close {
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  z-index: 50;
+  background-color: transparent;
+}
+.linen-5 .cc-pu-close i {
+  color: #514b31;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.linen-5 .modal-inner h2 {
+  font-weight: 700 !important;
+  font-size: 2.85714em !important;
+  line-height: 1.1 !important;
+  margin-top: 6px !important;
+  margin-bottom: 35px !important;
+  color: #090909 !important;
+  text-transform: none !important;
+  font-family: 'Lora', serif !important;
+}
+
+/*** Secondary ***/
+
+.linen-5 .modal-inner h3 {
+  font-size: 1.42857em !important;
+  line-height: 1.5em !important;
+  font-weight: 400 !important;
+  color: #514b31 !important;
+  font-family: 'Lora', serif !important;
+}
+
+/*** Content ***/
+
+.linen-5 .modal-inner p {
+
+}
+
+/*** Privacy ***/
+
+.linen-5 .cc-pu-privacy-info a {
+  color: #696969;
+  border-bottom: 1px solid #bfbbaf;
+}
+
+/*** Form ***/
+
+.linen-5 .cc-pu-form-control {
+  border: 1px solid #e0e0e0 !important;
+  background-color: #fff !important;
+  font-family: 'Lora', serif !important;
+}
+.linen-5 .cc-pu-smart-form .cc-pu-btn {
+  background-color: #514b31 !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  top:6px !important;
+  font-family: 'Lora', serif !important;
+}
+
+.pop-up-cc .cc-pu-thank-you {
+    background-color: #514b31;
+}
+
+.pop-up-cc .cc-pu-thank-you:after {  
+     border-top: 8px solid #514b31; 
+}
+
+@media only screen and (min-width: 768px) {
+	  
+
+   .pop-up-cc  .cc-pu-thank-you:after {  
+      border-bottom: 8px solid #514b31;   	
+	  border-top: none;	 
+    }
+}

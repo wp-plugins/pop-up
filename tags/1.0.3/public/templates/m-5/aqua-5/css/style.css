@@ -1,0 +1,121 @@
+/*** Base ***/
+
+.aqua-5 a, .aqua-5 a:hover {
+  color: #090909;
+}
+
+/*** General ***/
+
+.aqua-5.pop-up-cc {
+  color: #989898; 
+}
+.aqua-5 .modal-inner {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*** Close Button ***/
+
+.aqua-5 .cc-pu-close {
+  right: 7px;
+  top: 7px;
+  border-radius: 3px;
+  background-color: transparent;
+  padding:0 !important;
+}
+.aqua-5 .cc-pu-close i {
+  color: #59d5ef;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+#poststuff .modal-inner h2, #poststuff .modal-inner h3 {
+  color: inherit;
+  float: none;
+}
+
+.aqua-5 .modal-inner h2  {
+  margin-top: 0.21429em !important;
+  margin-bottom: 0.64286em !important;
+  line-height: 1.1 !important;
+  font-size: 3.21429em !important;
+  font-weight: 300 !important; 
+  color: #090909 !important;
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: none !important;
+}
+.aqua-5 .modal-inner h2 strong {
+  font-weight: 700 !important;
+   color: #59d5f0 !important;
+ 
+}
+/*** Secondary ***/
+
+.aqua-5 .modal-inner h3 {
+  font-size: 1.42857em !important;
+  line-height: 1.5em !important;
+  font-weight: 700 !important;
+  color: inherit !important;
+  color: #090909 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/*** Content ***/
+
+.aqua-5 .modal-inner p { 
+  color: inherit;
+  font-family: 'Roboto', sans-serif !important;
+	color: #989898 !important;
+	padding:0 !important;
+}
+
+/*** Privacy ***/
+
+.aqua-5 .cc-pu-privacy-info a { 
+  color: inherit;
+ color: #514b31 !important;
+  border-bottom: 1px solid #59d5f0;
+}
+
+/*** Form ***/
+
+.aqua-5 .cc-pu-form-control {
+  border: 1px solid #e0e0e0 !important;
+  background-color: #fff !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.aqua-5 .cc-pu-smart-form .cc-pu-btn {
+  -moz-border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  background-color: #59d5ef !important;
+  color: #fff !important;
+  padding: 15px 35px 15px 35px !important;
+  top:4px !important;
+  font-weight: 700 !important;
+}
+
+.pop-up-cc .cc-pu-thank-you {
+    background-color: #59d5ef;
+}
+
+.pop-up-cc .cc-pu-thank-you {
+    color:#fff !important;
+}
+
+.pop-up-cc .cc-pu-thank-you:after {  
+     border-top: 8px solid #59d5ef; 
+}
+
+@media only screen and (min-width: 768px) {
+	  
+
+   .pop-up-cc  .cc-pu-thank-you:after {  
+      border-bottom: 8px solid #59d5ef;
+	  border-top: none;	   	
+    }
+}
+
