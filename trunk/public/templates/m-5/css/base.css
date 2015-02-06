@@ -72,8 +72,16 @@
 
 .m-5 .modal-inner p {
   margin-top: 1.78571em;
-  line-height: 1.75 !important;
+  line-height: 1.75em !important;
+  letter-spacing:normal !important;
+  word-spacing:normal !important;
   padding: 0 !important;
+}
+
+.cc-pu-subheader-section h3 {
+	letter-spacing:normal !important;
+  word-spacing:normal !important;
+  padding: 0 !important;	
 }
 
 /*** Privacy ***/

@@ -41,6 +41,7 @@
   margin-top: 0.85714em !important;
   margin-bottom: 0.92857em !important;
   font-family: 'Signika', sans-serif !important;
+  text-transform: none !important;
 }
 
 /*** Secondary ***/
@@ -48,6 +49,7 @@
 .red-5 .modal-inner h3 {
   color: #fff !important;
   font-size: 1.42857em !important;
+  line-height: 1.5em !important;
   font-weight: 300 !important;
   font-family: 'Signika', sans-serif !important;
 }

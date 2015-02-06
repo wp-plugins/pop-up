@@ -109,7 +109,11 @@ class CcPopUpTemplate {
 		
 		$script = '<script type="text/javascript">';
 		$script .= 'jQuery(function($) {';
-		$script .= 'if(!$.cookie("shown_modal_'.$id.'")){ ';
+		
+		if(get_post_meta($id, '_chch_pop_up_show_only_once',true)) {
+			$script .= 'if(!$.cookie("shown_modal_'.$id.'")){ ';
+		}
+		
 		$script .= $mobile_header;
 		
 		$script .= 'setTimeout(function(){
@@ -125,7 +129,9 @@ class CcPopUpTemplate {
 					}, '.$timer.');  ';
 		$script .= $mobile_footer;
 		
-		$script .= '}';
+		if(get_post_meta($id, '_chch_pop_up_show_only_once',true)) {
+			$script .= '}';
+		}
 		$script .= '});';
 		$script .= '</script>'; 
 		

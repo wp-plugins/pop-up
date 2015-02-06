@@ -42,12 +42,14 @@
   margin-bottom: 35px !important;
   font-family: 'Playfair Display', serif;
   color: #000 !important;
+  text-transform: none !important;
 }
 
 /*** Secondary ***/
 
 .gold-5 .modal-inner h3 {
   font-size: 1.42857em !important;
+  line-height: 1.5em !important;
   font-weight: 400 !important;
   font-family: 'Playfair Display', serif !important;
   color: #514b31 !important;
