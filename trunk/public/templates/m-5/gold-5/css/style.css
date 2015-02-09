@@ -12,7 +12,7 @@
 }
 .gold-5 .modal-inner {
   background: #fff;
-  font-family: 'Open Sans', serif;
+  font-family: 'Open Sans', serif; 
 }
 
 /*** Close Button ***/
@@ -53,6 +53,7 @@
   font-weight: 400 !important;
   font-family: 'Playfair Display', serif !important;
   color: #514b31 !important;
+  text-transform: none !important;
 }
 
 /*** Content ***/
@@ -89,7 +90,11 @@
 .pop-up-cc .cc-pu-thank-you:after {  
      border-top: 8px solid #FFE96D; 
 }
-
+@media (max-width: 992px) { 
+	.gold-5 .modal-inner { 
+	  padding: 50px 20px 30px;
+	}
+}
 @media only screen and (min-width: 768px) {
 	  
 
