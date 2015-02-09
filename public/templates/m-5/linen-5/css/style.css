@@ -49,6 +49,7 @@
 /*** Secondary ***/
 
 .linen-5 .modal-inner h3 {
+	text-transform: none !important;
   font-size: 1.42857em !important;
   line-height: 1.5em !important;
   font-weight: 400 !important;
@@ -81,7 +82,7 @@
   color: #fff !important;
   font-size: 16px !important;
   font-weight: 700 !important;
-  top:6px !important;
+  top:6px;
   font-family: 'Lora', serif !important;
 }
 

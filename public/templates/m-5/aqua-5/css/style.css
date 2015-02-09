@@ -61,6 +61,7 @@
   color: inherit !important;
   color: #090909 !important;
   font-family: 'Roboto', sans-serif !important;
+  text-transform: none !important;
 }
 
 /*** Content ***/
@@ -93,8 +94,8 @@
   border-radius: 5px !important;
   background-color: #59d5ef !important;
   color: #fff !important;
-  padding: 15px 35px 15px 35px !important;
-  top:4px !important;
+  padding: 13px 35px 13px 35px !important;
+  top:4px;
   font-weight: 700 !important;
 }
 

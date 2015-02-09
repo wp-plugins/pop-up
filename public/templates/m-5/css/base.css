@@ -206,11 +206,11 @@
     background-color: #fff;
   }
   .m-5 .cc-pu-smart-form .cc-pu-form-control {
-    border: none!important;
-    padding-right: 10px;
+    border: none !important;
+    padding-right: 10px !important;
   }
   .m-5 .cc-pu-smart-form .cc-pu-btn {
-    top: auto;
+    top: auto !important;
     bottom: 6px;
     left: 0;
     right: 0;
