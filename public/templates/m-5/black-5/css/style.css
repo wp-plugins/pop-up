@@ -20,7 +20,7 @@
   top: 0;
   width: 45px;
   height: 45px;
-  background-color: #fff;
+  background: #fff !important;
 }
 .black-5 .cc-pu-close i {
   color: #090909;
@@ -31,13 +31,13 @@
 /*** Primary ***/
 
 .black-5 .modal-inner h2 {
-  text-transform: uppercase;
-  color: #fff;
+  text-transform: uppercase !important;
+  color: #fff !important;
   font-weight: 700 !important;
   font-size: 2.5em !important;
   line-height: 1.1 !important;
-  margin: 12px 0 0.92857em;
-  font-family: 'Oswald', sans-serif;
+  margin: 12px 0 0.92857em !important;
+  font-family: 'Oswald', sans-serif !important;
 }
 
 /*** Secondary ***/
@@ -61,25 +61,25 @@
 /*** Privacy ***/
 
 .black-5 .cc-pu-privacy-info a {
-  color: #989898;
-  border-bottom: 1px solid #989898;
+  color: #989898 !important;
+  border-bottom: 1px solid #989898 !important;
 }
 
 /*** Form ***/
 
 .black-5 .cc-pu-form-control {
   border: 1px solid #090909 !important;
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
+  background: #fff !important;
+  font-family: "Open Sans", sans-serif !important;
 }
-.black-5 .cc-pu-smart-form .cc-pu-btn {
-  background-color: #000;
-  color: #fff;
+.black-5 .cc-pu-smart-form .cc-pu-btn, .black-5 .cc-pu-smart-form .cc-pu-btn:hover {
+  background: #000 !important;
+  color: #fff !important;
   padding: 14px 35px 13px 35px;
   top:3px;
   font-weight: 700;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase; 
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important; 
 }
 
 .pop-up-cc .cc-pu-thank-you {

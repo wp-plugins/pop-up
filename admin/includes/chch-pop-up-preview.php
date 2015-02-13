@@ -105,7 +105,7 @@ class CcPopUpPeview {
 						array(
 							'type'	 => 'revealer',  
 							'name'   => 'custom', 
-							'desc'   => 'Enable custom pop-up size',
+							'desc'   => 'Enable custom pop-up size (If you set a custom pop-up size, the pop-up won’t be responsive.)',
 							'revaeals' => array(
 								'title' => 'Custom Pop-Up Size',
 								'fields' => array(
@@ -205,7 +205,7 @@ class CcPopUpPeview {
 							'name'   => 'text',  
 							'target' => 'input', 
 							'attr'   => 'placeholder', 
-							'desc'   => 'Privacy Policy Link:',
+							'desc'   => 'Text:',
 						),
 					),
 				),

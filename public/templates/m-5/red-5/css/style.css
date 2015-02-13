@@ -23,10 +23,10 @@
   width: 45px;
   height: 45px;
   z-index: 50;
-  background-color: #fff;
+  background: #fff !important;
 }
 .red-5 .cc-pu-close i {
-  color: #090909;
+  color: #090909 !important;
 }
 
 /*** Headers ***/
@@ -34,7 +34,7 @@
 /*** Primary ***/
 
 .red-5 .modal-inner h2 {
-  color: #fff;
+  color: #fff !important;
   font-weight: 700 !important;
   font-size: 2.5em !important;
   line-height: 1.1 !important;
@@ -75,14 +75,14 @@
 .red-5 .cc-pu-form-control {
   border: none;
   background-color: #fff;
-  font-family: "Signika", sans-serif;
+  font-family: "Signika", sans-serif !important;
 }
-.red-5 .cc-pu-smart-form .cc-pu-btn {
-  background-color: #000;
-  color: #fff;
-  font-weight: 700;
-  font-family: "Signika", sans-serif;
-  text-transform: uppercase;
+.red-5 .cc-pu-smart-form .cc-pu-btn, .red-5 .cc-pu-smart-form .cc-pu-btn {
+  background: #000 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-family: "Signika", sans-serif !important;
+  text-transform: uppercase !important;
   top:7px;
 }
 

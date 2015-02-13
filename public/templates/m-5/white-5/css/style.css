@@ -21,7 +21,7 @@
   top: 0;
   width: 45px;
   height: 45px;
-  background-color: #fff;
+  background: #fff !important;
 }
 .white-5 .cc-pu-close i {
   color: #090909;
@@ -62,8 +62,8 @@
 /*** Privacy ***/
 
 .white-5 .cc-pu-privacy-info a {
-  color: #000;
-  border-bottom: 1px solid #989898;
+  color: #000 !important;
+  border-bottom: 1px solid #989898 !important;
 }
 
 /*** Form ***/
@@ -73,9 +73,9 @@
   background-color: #fff !important;
   font-family: "Open Sans", sans-serif !important;
 }
-.white-5 .cc-pu-smart-form .cc-pu-btn {
-  background-color: #000;
-  color: #fff;
+.white-5 .cc-pu-smart-form .cc-pu-btn, .white-5 .cc-pu-smart-form .cc-pu-btn {
+  background: #000 !important;
+  color: #fff !important;
   padding: 12px 35px 13px 35px;
   top:4px;
   font-weight: 700;
