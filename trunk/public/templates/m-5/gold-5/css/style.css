@@ -24,10 +24,10 @@
   width: 45px;
   height: 45px;
   z-index: 50;
-  background-color: #ffe96d;
+  background: #ffe96d !important;
 }
 .gold-5 .cc-pu-close i {
-  color: #000;
+  color: #000 !important;
 }
 
 /*** Headers ***/
@@ -40,7 +40,7 @@
   line-height: 1.1 !important;
   margin-top: 0 !important;
   margin-bottom: 35px !important;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   color: #000 !important;
   text-transform: none !important;
 }
@@ -62,25 +62,25 @@
 /*** Privacy ***/
 
 .gold-5 .cc-pu-privacy-info a {
-  color: #696969;
-  border-bottom: 1px solid #ffe96d;
-  font-weight: normal;
+  color: #696969 !important;
+  border-bottom: 1px solid #ffe96d !important;
+  font-weight: normal !important;
 }
 
 /*** Form ***/
 
 .gold-5 .cc-pu-form-control {
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
+  border: 1px solid #e0e0e0 !important;
+  background: #fff !important;
+  font-family: "Open Sans", sans-serif !important;
 }
-.gold-5 .cc-pu-smart-form .cc-pu-btn {
-  background-color: #ffe96d;
-  color: #000;
+.gold-5 .cc-pu-smart-form .cc-pu-btn, .gold-5 .cc-pu-smart-form .cc-pu-btn {
+  background: #ffe96d !important;
+  color: #000 !important;
   font-size: 16px;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
-  text-transform: uppercase;
+  font-family: 'Playfair Display', serif !important;
+  text-transform: uppercase !important;
 }
 
 .pop-up-cc .cc-pu-thank-you {

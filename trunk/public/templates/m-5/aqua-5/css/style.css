@@ -67,18 +67,17 @@
 /*** Content ***/
 
 .aqua-5 .modal-inner p { 
-  color: inherit;
-  font-family: 'Roboto', sans-serif !important;
+	color: inherit;
+	font-family: 'Roboto', sans-serif !important;
 	color: #989898 !important;
 	padding:0 !important;
 }
 
 /*** Privacy ***/
 
-.aqua-5 .cc-pu-privacy-info a { 
-  color: inherit;
- color: #514b31 !important;
-  border-bottom: 1px solid #59d5f0;
+.aqua-5 .cc-pu-privacy-info a {  
+	color: #514b31 !important;
+	border-bottom: 1px solid #59d5f0;
 }
 
 /*** Form ***/
@@ -88,11 +87,11 @@
   background-color: #fff !important;
   font-family: 'Roboto', sans-serif !important;
 }
-.aqua-5 .cc-pu-smart-form .cc-pu-btn {
+.aqua-5 .cc-pu-smart-form .cc-pu-btn, .aqua-5 .cc-pu-smart-form .cc-pu-btn:hover {
   -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   border-radius: 5px !important;
-  background-color: #59d5ef !important;
+  background: #59d5ef !important;
   color: #fff !important;
   padding: 13px 35px 13px 35px !important;
   top:4px;

@@ -43,10 +43,9 @@ class CcPopUpAdmin {
 		
 		// Register Post Type Meta Boxes and fields
 		add_action( 'init', array( $this, 'cc_pu_initialize_cmb_meta_boxes'), 9999 );
-		add_action( 'cmb_render_pages_select', array( $this, 'cc_pu_render_pages_select'), 10, 5  ); 
 		add_filter( 'cmb_meta_boxes', array( $this, 'cc_pu_posttype_metaboxes') );
-		
-		add_action('add_meta_boxes_chch-pop-up', array( $this, 'cc_pu_metabox' ));
+		add_action( 'add_meta_boxes_chch-pop-up', array( $this, 'cc_pu_metabox' ));
+		add_action( 'cmb_render_pages_select', array( $this, 'cc_pu_render_pages_select'), 10, 5  ); 
 		
 		// Templates view
 		add_action('edit_form_after_title',array( $this, 'form_title' ));
@@ -568,20 +567,20 @@ class CcPopUpAdmin {
         $args = array(
 			'post_type' => $post_types,
 			'posts_per_page' => -1, 
-			'sortby' => 'title',
-			'sort' => 'ASC'
+			'orderby' => 'title',
+			'order' => 'ASC'
 		);
 		
-		query_posts($args);
+		$post_list = get_posts($args);
 		
 		$all_posts = array();
 		
-		if(have_posts()):
-			while(have_posts()): the_post();
-				$all_posts[get_the_ID()] = get_the_title();
-			endwhile;
-		endif;	
-        wp_reset_query();
+		if($post_list):
+			foreach($post_list as $post):
+				$all_posts[$post->ID] = get_the_title($post->ID);
+			endforeach;
+		endif;
+		
         return $all_posts; 
 	}
 	
@@ -659,7 +658,7 @@ class CcPopUpAdmin {
 	
 	/**
 	 * Load preview by ajax
-	 
+	 *
 	 */
 	function cc_pu_load_preview_module() {
  
