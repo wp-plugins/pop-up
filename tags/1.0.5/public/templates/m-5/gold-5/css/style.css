@@ -1,0 +1,106 @@
+/*** Base ***/
+
+.gold-5 a, .gold-5 a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+/*** General ***/
+
+.gold-5.pop-up-cc {
+  color: #989898;  
+}
+.gold-5 .modal-inner {
+  background: #fff;
+  font-family: 'Open Sans', serif; 
+}
+
+/*** Close Button ***/
+
+.gold-5 .cc-pu-close {
+  top: 7px;
+  right: 7px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  z-index: 50;
+  background: #ffe96d !important;
+}
+.gold-5 .cc-pu-close i {
+  color: #000 !important;
+}
+
+/*** Headers ***/
+
+/*** Primary ***/
+
+.gold-5 .modal-inner h2 {
+  font-weight: 400 !important;
+  font-size: 45px !important;
+  line-height: 1.1 !important;
+  margin-top: 0 !important;
+  margin-bottom: 35px !important;
+  font-family: 'Playfair Display', serif !important;
+  color: #000 !important;
+  text-transform: none !important;
+}
+
+/*** Secondary ***/
+
+.gold-5 .modal-inner h3 {
+  font-size: 1.42857em !important;
+  line-height: 1.5em !important;
+  font-weight: 400 !important;
+  font-family: 'Playfair Display', serif !important;
+  color: #514b31 !important;
+  text-transform: none !important;
+}
+
+/*** Content ***/
+ 
+
+/*** Privacy ***/
+
+.gold-5 .cc-pu-privacy-info a {
+  color: #696969 !important;
+  border-bottom: 1px solid #ffe96d !important;
+  font-weight: normal !important;
+}
+
+/*** Form ***/
+
+.gold-5 .cc-pu-form-control {
+  border: 1px solid #e0e0e0 !important;
+  background: #fff !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+.gold-5 .cc-pu-smart-form .cc-pu-btn, .gold-5 .cc-pu-smart-form .cc-pu-btn {
+  background: #ffe96d !important;
+  color: #000 !important;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif !important;
+  text-transform: uppercase !important;
+}
+
+.pop-up-cc .cc-pu-thank-you {
+    background-color: #FFE96D;
+}
+
+.pop-up-cc .cc-pu-thank-you:after {  
+     border-top: 8px solid #FFE96D; 
+}
+@media (max-width: 992px) { 
+	.gold-5 .modal-inner { 
+	  padding: 50px 20px 30px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	  
+
+   .pop-up-cc  .cc-pu-thank-you:after {  
+      border-bottom: 8px solid #FFE96D; 
+	  border-top: none;	   	
+    }
+}
+
