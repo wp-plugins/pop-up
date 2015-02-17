@@ -75,22 +75,38 @@ class CcPopUpAdmin {
 	 * @since     1.0.0
 	 * 
 	 */
-	function cc_pu_tinymce_keyup_event() {
-		 if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) { 
-			  add_filter( 'mce_external_plugins', array( $this, 'cc_pu_tinymce_event') );
-		 }
+	function cc_pu_tinymce_keyup_event() { 
+		if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
+			if ( get_bloginfo('version') < 3.9 ) { 
+				add_filter( 'mce_external_plugins', array( $this, 'cc_pu_tinymce_event_old') );
+			} else
+			{
+				add_filter( 'mce_external_plugins', array( $this, 'cc_pu_tinymce_event') );	 
+			} 
+		}
 	}
   	
 	
 	/**
-	 * Add keyup to tineMce
+	 * Add keyup to tineMce for WP version > 3.9
 	 *
 	 * @since     1.0.0
 	 * 
 	 */
 	function cc_pu_tinymce_event($plugin_array) { 
-		$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce.js';
-  
+	 	$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce.js'; 
+		return $plugin_array;
+	}
+	
+	
+	/**
+	 * Add keyup to tineMce for WP version < 3.9
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function cc_pu_tinymce_event_old($plugin_array) { 
+	 	$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce-old.js'; 
 		return $plugin_array;
 	}
 	
