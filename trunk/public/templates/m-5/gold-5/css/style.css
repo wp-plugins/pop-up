@@ -74,7 +74,7 @@
   background: #fff !important;
   font-family: "Open Sans", sans-serif !important;
 }
-.gold-5 .cc-pu-smart-form .cc-pu-btn, .gold-5 .cc-pu-smart-form .cc-pu-btn {
+.gold-5 .cc-pu-smart-form .cc-pu-btn, .gold-5 .cc-pu-smart-form .cc-pu-btn:hover {
   background: #ffe96d !important;
   color: #000 !important;
   font-size: 16px;

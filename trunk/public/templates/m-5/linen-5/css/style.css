@@ -77,12 +77,11 @@
   background-color: #fff !important;
   font-family: 'Lora', serif !important;
 }
-.linen-5 .cc-pu-smart-form .cc-pu-btn, .linen-5 .cc-pu-smart-form .cc-pu-btn {
+.linen-5 .cc-pu-smart-form .cc-pu-btn, .linen-5 .cc-pu-smart-form .cc-pu-btn:hover {
   background: #514b31 !important;
   color: #fff !important;
   font-size: 16px !important;
-  font-weight: 700 !important;
-  top:6px;
+  font-weight: 700 !important; 
   font-family: 'Lora', serif !important;
 }
 

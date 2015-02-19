@@ -586,7 +586,7 @@ class CcPopUpPeview {
 		if(isset($fields['disable'])){
 			$section .= '
 				<div class="cc-pu-overlay">
-					<a href="https://shop.chop-chop.org/pop-up/" target="_blank">AVAILABLE IN PRO</a>
+					<a href="http://ch-ch.org/pupro" target="_blank">AVAILABLE IN PRO</a>
 				</div>'; 	
 		}
 		
