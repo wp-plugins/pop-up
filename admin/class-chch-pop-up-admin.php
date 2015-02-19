@@ -137,7 +137,7 @@ class CcPopUpAdmin {
 		}
 		
 		if ($column === 'cc_pu_clicks') {
-			echo '<a href="https://shop.chop-chop.org/pop-up/" target="_blank">AVAILABLE IN PRO</a>';
+			echo '<a href="http://ch-ch.org/pupro" target="_blank">AVAILABLE IN PRO</a>';
 		}
 		
 		if ($column === 'cc_pu_template') {
@@ -652,7 +652,7 @@ class CcPopUpAdmin {
 			{	
 				if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/m-5/css/base.css'))
 				{
-					wp_enqueue_style('base_m-5', CC_PU_PLUGIN_URL . 'public/templates/m-5/css/base.css', null, CcPopUp::VERSION, 'all');  
+					wp_enqueue_style($this->plugin_slug .'_base_m-5', CC_PU_PLUGIN_URL . 'public/templates/m-5/css/base.css', null, CcPopUp::VERSION, 'all');  
 				}
 				
 				foreach($templates as $template)
@@ -663,7 +663,7 @@ class CcPopUpAdmin {
 					
 					if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/'.$base.'/'.$template_id.'/css/style.css'))
 					{
-					wp_enqueue_style('style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');
+					wp_enqueue_style($this->plugin_slug .'_style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');
 					}
 				}
 			}

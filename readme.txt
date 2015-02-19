@@ -5,7 +5,7 @@ Contributors: chopchoporg
 Tags: pop-up, pop up, modal, modal window
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,7 +49,10 @@ Pop-Up CC is a perfect solution to capture the audience’s attention in the rig
 **Need more?**
 
 
-We are still working on Pop-Up CC Pro versions:
+[Get Pop-Up CC Pro](https://shop.chop-chop.org/pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=pop-up-free&utm_campaign=wordpressorg-free-plugin)
+
+Stay tuned for more flavors of Pop-Up CC Pro:
+
 
 **Close Attempt Pop-Up CC Pro**
 
@@ -99,7 +102,7 @@ The pop-up will appear when a user clicks a given class or id. Perfect for displ
 * Storing emails in WordPress database
 
 
-Would you like to know when we start?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab 5% OFF code.
+Would you like to know when they are ready?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab 5% OFF code.
 
 
 == Installation ==
@@ -165,6 +168,9 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 
 == Changelog ==
+
+= 1.0.7 =
+template fixes
 
 = 1.0.6 =
 wysiwyg editor fixes

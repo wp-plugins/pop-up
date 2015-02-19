@@ -75,8 +75,7 @@
 .black-5 .cc-pu-smart-form .cc-pu-btn, .black-5 .cc-pu-smart-form .cc-pu-btn:hover {
   background: #000 !important;
   color: #fff !important;
-  padding: 14px 35px 13px 35px;
-  top:3px;
+  padding: 0 35px !important; 
   font-weight: 700;
   font-family: 'Oswald', sans-serif !important;
   text-transform: uppercase !important; 

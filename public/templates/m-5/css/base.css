@@ -124,11 +124,13 @@
   margin-bottom: 1.42857em;
 }
 .m-5 .cc-pu-smart-form .cc-pu-btn {
-  padding: 12px 30px 12px 30px;
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  font-size: 1.14286em;
+  padding: 0 30px !important;
+  position: absolute !important; 
+  right: 4px !important;
+  top: 4px !important;
+  font-size: 1.14286em !important;
+  height:50px !important;
+  line-height:50px !important;
 }
 .m-5 .cc-pu-smart-form i {
   font-size: 1.42857em;

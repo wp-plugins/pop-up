@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.6';
+	const VERSION = '1.0.7';
 
 	/** 
 	 *
@@ -299,7 +299,7 @@ class CcPopUp {
 			}
 			
 			if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/m-5/css/base.css')){
-				wp_enqueue_style('base_m-5', CC_PU_PLUGIN_URL . 'public/templates/m-5/css/base.css', null, CcPopUp::VERSION, 'all');  
+				wp_enqueue_style($this->plugin_slug .'_base_m-5', CC_PU_PLUGIN_URL . 'public/templates/m-5/css/base.css', null, CcPopUp::VERSION, 'all');  
 				  
 			} 
 			
@@ -322,7 +322,7 @@ class CcPopUp {
 				$template_base = get_post_meta( $id, '_chch_pop_up_base', true);
 				
 				if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css')){
-					wp_enqueue_style('style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');  
+					wp_enqueue_style($this->plugin_slug .'_style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');  
 					  
 				}   
 			}

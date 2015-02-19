@@ -93,8 +93,7 @@
   border-radius: 5px !important;
   background: #59d5ef !important;
   color: #fff !important;
-  padding: 13px 35px 13px 35px !important;
-  top:4px;
+  padding: 0 35px !important; 
   font-weight: 700 !important;
 }
 

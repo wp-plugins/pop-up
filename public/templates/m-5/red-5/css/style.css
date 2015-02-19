@@ -77,13 +77,12 @@
   background-color: #fff;
   font-family: "Signika", sans-serif !important;
 }
-.red-5 .cc-pu-smart-form .cc-pu-btn, .red-5 .cc-pu-smart-form .cc-pu-btn {
+.red-5 .cc-pu-smart-form .cc-pu-btn, .red-5 .cc-pu-smart-form .cc-pu-btn:hover {
   background: #000 !important;
   color: #fff !important;
   font-weight: 700 !important;
   font-family: "Signika", sans-serif !important;
-  text-transform: uppercase !important;
-  top:7px;
+  text-transform: uppercase !important; 
 }
 
 .pop-up-cc .cc-pu-thank-you {
