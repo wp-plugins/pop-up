@@ -13,8 +13,17 @@
 <div class="cc-pu-bg m-5 linen-5"></div>
 <article class="pop-up-cc m-5 linen-5">
 	<div class="modal-inner">
-		<?php $views_control = get_post_meta($id,'_chch_pop_up_show_only_once',true) ? 'yes' : 'no'; ?>
-		<a class="cc-pu-close" data-modalId="<?php echo $id; ?>" data-views-control="<?php echo $views_control;  ?>">  <i class="fa fa-times"></i> </a> 
+		<?php 
+		$views_control = 'refresh'; 
+		if(get_post_meta($id,'_chch_pop_up_show_once_per',true)) {
+			$views_control = get_post_meta($id,'_chch_pop_up_show_once_per',true); 	 
+		} elseif(get_post_meta($id,'_chch_pop_up_show_only_once',true)) {
+			$views_control = 'session'; 
+			update_post_meta($id,'_chch_pop_up_show_once_per','session');	
+		}
+		
+		?>
+		<a class="cc-pu-close" data-modalId="<?php echo $id; ?>" data-views-control="yes" data-expires-control="<?php echo $views_control ?>">  <i class="fa fa-times"></i> </a>
 		
 		<?php $content = $template_options['contents']; ?>
 		<div class="cc-pu-header-section"> 

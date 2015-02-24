@@ -199,3 +199,7 @@
 .cc-pu-overlay a:hover{
 	text-decoration:underline;
 }
+
+.wrap div.updated {
+	width: 71.5% !important;	
+}

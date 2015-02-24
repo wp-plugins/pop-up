@@ -50,10 +50,15 @@ jQuery(document).ready(function($) {
 		
 		chchPopUpID = $(this).attr('data-modalID'); 
 		controlViews = $(this).attr('data-views-control');  
+		controlExpires = $(this).attr('data-expires-control');  
 		
-		if(controlViews === 'yes'){
-			if(!$.cookie('shown_modal_'+chchPopUpID)){
-				$.cookie('shown_modal_'+chchPopUpID, 'true',{ path: '/' });	
+		if(controlViews === 'yes' && controlExpires != 'refresh'){ 
+			if(!$.cookie('shown_modal_'+chchPopUpID)){  
+				switch(controlExpires){
+					case 'session':
+						$.cookie('shown_modal_'+chchPopUpID, 'true',{ path: '/' });	
+					break; 			
+				}
 			}
 		}
 		

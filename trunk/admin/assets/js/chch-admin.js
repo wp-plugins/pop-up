@@ -4,6 +4,9 @@ jQuery(document).ready( function ($) {
 	 '<h2 class="nav-tab-wrapper" id="cc-pu-tabs"><a class="nav-tab nav-tab-active" href="#" title="Templates" data-target="cc-pu-tab-1">Templates</a><a class="nav-tab" href="#" title="Settings" data-target="cc-pu-tab-2">Settings</a></h2>'
 	 );
 	 
+	 $('#wpbody-content > .wrap').prepend(
+	 '<a class="button button-secondary right button-hero" style="margin: 25px 0px 0px 2px; padding: 0px 20px; height: 47px;" href="https://shop.chop-chop.org/contact" target="_blank">Contact Support</a><a class="button button-primary right button-hero" href="http://ch-ch.org/pupro" style="margin: 25px 20px 0 2px;">Get Pro</a>');
+	 
 	$('#cc-pu-tabs a').on('click', function(e){
 		e.preventDefault();
 		var target = $(this).attr('data-target');
@@ -53,7 +56,7 @@ jQuery(document).ready( function ($) {
             async: true,
             type: "POST",
             data: {
-                action: "cc_pu_load_preview_module",
+                action: "chch_pu_load_preview_module",
                 template: template,
 				base: base,
 				nounce: nounce,

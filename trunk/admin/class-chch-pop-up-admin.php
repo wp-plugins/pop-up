@@ -36,141 +36,42 @@ class CcPopUpAdmin {
 		$this->plugin_slug = $this->plugin->get_plugin_slug();
 		
 		// Register Post Type
-		add_action( 'init', array( $this, 'register_cc_pu_post_type' ) );
+		add_action( 'init', array( $this, 'chch_pu_register_post_type' ) );
 		
-		// Register Post Type
-		add_filter( 'post_updated_messages',  array( $this, 'cc_pu_post_type_messages') );
+		// Register Post Type Messages
+		add_filter( 'post_updated_messages',  array( $this, 'chch_pu_post_type_messages') );
 		
 		// Register Post Type Meta Boxes and fields
-		add_action( 'init', array( $this, 'cc_pu_initialize_cmb_meta_boxes'), 9999 );
-		add_filter( 'cmb_meta_boxes', array( $this, 'cc_pu_posttype_metaboxes') );
-		add_action( 'add_meta_boxes_chch-pop-up', array( $this, 'cc_pu_metabox' ));
-		add_action( 'cmb_render_pages_select', array( $this, 'cc_pu_render_pages_select'), 10, 5  ); 
+		add_action( 'init', array( $this, 'chch_pu_initialize_cmb_meta_boxes'), 9999 );
+		add_filter( 'cmb_meta_boxes', array( $this, 'chch_pu_cmb_metaboxes') );
+		add_action( 'add_meta_boxes_chch-pop-up', array( $this, 'chch_pu_metabox' ));
+		add_action( 'cmb_render_pages_select', array( $this, 'chch_pu_render_pages_select'), 10, 5  ); 
+		add_action( 'cmb_render_cookie_select', array( $this, 'chch_pu_render_cookie_select'), 10, 5  ); 
+		add_action( 'cmb_render_newsletter_select', array( $this, 'chch_pu_render_newsletter_select'), 10, 5  ); 
+		
+		// remove help tabs
+		add_filter( 'contextual_help', array($this,'chch_pu_remove_help_tabs'), 999, 3 );
+		add_filter( 'screen_options_show_screen', '__return_false');
 		
 		// Templates view
-		add_action('edit_form_after_title',array( $this, 'form_title' ));
+		add_action( 'edit_form_after_title',array( $this, 'chch_pu_templates_view' ));
 		
 		// Save Post Data
-		add_action( 'save_post', array( $this, 'save_pop_up_meta'), 10, 3 ); 
+		add_action( 'save_post', array( $this, 'chch_pu_save_pop_up_meta'), 10, 3 ); 
 		
-		add_action( 'admin_init', array( $this,'cc_pu_tinymce_keyup_event') );  
+		add_action( 'admin_init', array( $this,'chch_pu_tinymce_keyup_event') );  
 		
 		// Customize the columns in the popup list.
-		add_filter('manage_chch-pop-up_posts_columns',array( $this, 'custom_pop_up_columns') ); 
-
+		add_filter('manage_chch-pop-up_posts_columns',array( $this, 'chch_pu_custom_columns') ); 
 		// Returns the content for the custom columns.
-		add_action('manage_chch-pop-up_posts_custom_column',array( $this, 'manage_custom_pop_up_columns' ),10, 2); 
-		  
-		add_action( 'admin_print_scripts', array( $this, 'enqueue_cc_pu_admin_scripts' ));
-		 
-		add_action( 'admin_head', array( $this, 'admin_head_scripts') ); 
-		
-		add_action( 'wp_ajax_cc_pu_load_preview_module', array( $this, 'cc_pu_load_preview_module'  )); 
+		add_action('manage_chch-pop-up_posts_custom_column',array( $this, 'chch_pu_manage_custom_columns' ),10, 2);  
+		add_action( 'admin_print_scripts', array( $this, 'chch_pu_enqueue_admin_scripts' ));
+		add_action( 'admin_head', array( $this, 'chch_pu_admin_head_scripts') ); 
+		add_action( 'wp_ajax_chch_pu_load_preview_module', array( $this, 'chch_pu_load_preview_module'  )); 
+	 
 	} 
 	
 	
-	/**
-	 * Register tineMce event
-	 *
-	 * @since     1.0.0
-	 * 
-	 */
-	function cc_pu_tinymce_keyup_event() { 
-		if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
-			if ( get_bloginfo('version') < 3.9 ) { 
-				add_filter( 'mce_external_plugins', array( $this, 'cc_pu_tinymce_event_old') );
-			} else
-			{
-				add_filter( 'mce_external_plugins', array( $this, 'cc_pu_tinymce_event') );	 
-			} 
-		}
-	}
-  	
-	
-	/**
-	 * Add keyup to tineMce for WP version > 3.9
-	 *
-	 * @since     1.0.0
-	 * 
-	 */
-	function cc_pu_tinymce_event($plugin_array) { 
-	 	$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce.js'; 
-		return $plugin_array;
-	}
-	
-	
-	/**
-	 * Add keyup to tineMce for WP version < 3.9
-	 *
-	 * @since     1.0.0
-	 * 
-	 */
-	function cc_pu_tinymce_event_old($plugin_array) { 
-	 	$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce-old.js'; 
-		return $plugin_array;
-	}
-	
-	
-	/**
-	 * Return a pages_select field for CMB
-	 *
-	 * @since     1.0.0
-	 * 
-	 */
-	function custom_pop_up_columns($defaults) {
-		$defaults['cc_pu_status'] = __('Active',$this->plugin_slug);
-		$defaults['cc_pu_clicks'] = __('Clicks',$this->plugin_slug);
-		$defaults['cc_pu_template'] = __('Template',$this->plugin_slug);
-		return $defaults;
-	}
-	
- 	
-	/**
-	 * Create columns in Pop-ups list
-	 *
-	 * @since     1.0.0  
-	 */
-	function manage_custom_pop_up_columns($column, $post_id) {
-		global $post;
-		if ($column === 'cc_pu_status') {
-			echo ucfirst(get_post_meta($post_id,'_chch_pop_up_status', true));
-		}
-		
-		if ($column === 'cc_pu_clicks') {
-			echo '<a href="http://ch-ch.org/pupro" target="_blank">AVAILABLE IN PRO</a>';
-		}
-		
-		if ($column === 'cc_pu_template') {
-			echo ucfirst(get_post_meta($post_id,'_chch_pop_up_template', true));
-		}
-	}
-	
-	
-	/**
-	 * Return a pages_select field for CMB
-	 *
-	 * @since     1.0.0
-	 * 
-	 */
-	function cc_pu_render_pages_select( $field_args, $escaped_value, $object_id, $object_type, $field_type_object ) {
-		$all_pages = $this->get_all_pages();
-		 ?>
-		<select class="cmb_select" name="<?php echo $field_args['_name']; ?>[]" id="<?php echo $field_args['_id']; ?>" multiple="multiple">	
-		<?php
-			foreach($all_pages as $value => $title):
-				$selected = '';
-				if(!empty($escaped_value)){
-					if(in_array( $value,$escaped_value)) {
-						$selected = 'selected';	
-					} 
-				}
-			 	echo '<option value="'.$value.'" '.$selected .'>'.$title.'</option>	';
-			endforeach
-		 ?>
-			</select>	 
-		<?php  
-		 
-	} 
 	
 	/**
 	 * Return an instance of this class.
@@ -189,12 +90,90 @@ class CcPopUpAdmin {
 		return self::$instance;
 	}
 	
+	 
+	/**
+	 * Register tineMce event
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_tinymce_keyup_event() { 
+		if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
+			if ( get_bloginfo('version') < 3.9 ) { 
+				add_filter( 'mce_external_plugins', array( $this, 'chch_pu_tinymce_event_old') );
+			} else
+			{
+				add_filter( 'mce_external_plugins', array( $this, 'chch_pu_tinymce_event') );	 
+			} 
+		}
+	}
+  	
+	
+	/**
+	 * Add keyup to tineMce for WP version > 3.9
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_tinymce_event($plugin_array) { 
+	 	$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce.js'; 
+		return $plugin_array;
+	}
+	
+	
+	/**
+	 * Add keyup to tineMce for WP version < 3.9
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_tinymce_event_old($plugin_array) { 
+	 	$plugin_array['keyup_event'] = CC_PU_PLUGIN_URL .'admin/assets/js/chch-tinymce-old.js'; 
+		return $plugin_array;
+	}
+	
+	
+	/**
+	 * Return a pages_select field for CMB
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_custom_columns($defaults) {
+		$defaults['chch_pu_status'] = __('Active',$this->plugin_slug);
+		$defaults['chch_pu_clicks'] = __('Clicks',$this->plugin_slug);
+		$defaults['chch_pu_template'] = __('Template',$this->plugin_slug);
+		return $defaults;
+	}
+	
+ 	
+	/**
+	 * Create columns in Pop-ups list
+	 *
+	 * @since     1.0.0  
+	 */
+	function chch_pu_manage_custom_columns($column, $post_id) {
+		global $post;
+		if ($column === 'chch_pu_status') {
+			echo ucfirst(get_post_meta($post_id,'_chch_pop_up_status', true));
+		}
+		
+		if ($column === 'chch_pu_clicks') {
+			echo '<a href="http://ch-ch.org/pupro" target="_blank">AVAILABLE IN PRO</a>';
+		}
+		
+		if ($column === 'chch_pu_template') {
+			echo ucfirst(get_post_meta($post_id,'_chch_pop_up_template', true));
+		}
+	}
+	 
+	
 	/**
 	 * Register Custom Post Type
 	 *
-	 * @since    0.1.0
+	 * @since    1.0.0
 	 */
-	public function register_cc_pu_post_type() {
+	public function chch_pu_register_post_type() {
 		
 		$domain = $this->plugin_slug;
 		
@@ -245,7 +224,7 @@ class CcPopUpAdmin {
 	 *
 	 * @return array Amended post update messages with new CPT update messages.
 	 */
-	function cc_pu_post_type_messages( $messages ) {
+	function chch_pu_post_type_messages( $messages ) {
 		$post             = get_post();
 		$post_type        = get_post_type( $post );
 		$post_type_object = get_post_type_object( $post_type );
@@ -287,19 +266,19 @@ class CcPopUpAdmin {
 	/**
 	 * Initialize Custom Metaboxes Class
 	 *
-	 * @since  0.1.0 
+	 * @since  1.0.0 
 	 */
-	function cc_pu_initialize_cmb_meta_boxes() {
+	function chch_pu_initialize_cmb_meta_boxes() {
  		if ( ! class_exists( 'cmb_Meta_Box' ) )
 			require_once( dirname( __FILE__ ) . '/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/init.php' ); 
 	}
 	
 	/**
-	 * Register custom metaboxes
+	 * Register custom metaboxes with CMB
 	 *
-	 * @since  0.1.0 
+	 * @since  1.0.0 
 	 */
-	function cc_pu_posttype_metaboxes( array $meta_boxes ) {
+	function chch_pu_cmb_metaboxes( array $meta_boxes ) {
 		
 		$domain = $this->plugin_slug; 
 		$prefix = '_chch_pop_up_';
@@ -347,10 +326,10 @@ class CcPopUpAdmin {
 					'default' => '0'
 				), 
 				array(
-					'name' => __( 'Show once per session', $domain  ),
+					'name' => __( 'Show once per', $domain  ),
 					'desc'    => __( '', $domain  ),
-					'id'   => $prefix . 'show_only_once',
-					'type' => 'checkbox', 
+					'id'   => $prefix . 'show_once_per',
+					'type' => 'cookie_select', 
 				), 
 				array(
 					'name' => __( 'Auto close the pop-up after the sign-up', $domain  ),
@@ -405,7 +384,13 @@ class CcPopUpAdmin {
 			'context'    => 'normal',
 			'priority'   => 'high',
 			'show_names' => true,  
-			'fields'     => array( 
+			'fields'     => array(
+				array(
+					'name' => __( 'Save emails to:', $domain  ),
+					'desc'    => __( '', $domain  ),
+					'id'   => $prefix . 'save_emails',
+					'type' => 'newsletter_select', 
+				),  
 				array(
 					'name'    => __( 'Newsletter Status:', $domain ),
 					'desc'    => __( 'Enable or disable newsletter subscribe form on the front-end.', $domain  ),
@@ -435,7 +420,7 @@ class CcPopUpAdmin {
 	 *
 	 * @since  0.1.0 
 	 */
-	public function cc_pu_metabox( $post ) {
+	public function chch_pu_metabox( $post ) {
 		remove_meta_box( 'slugdiv', 'cc-pop-up', 'normal' );
 		$post_boxes = array(
 			'cc-pu-metabox-general',
@@ -446,7 +431,7 @@ class CcPopUpAdmin {
 		
 		foreach($post_boxes as $post_box)
 		{
-			add_filter( 'postbox_classes_chch-pop-up_'.$post_box,array( $this, 'add_metabox_classes') );
+			add_filter( 'postbox_classes_chch-pop-up_'.$post_box,array( $this, 'chch_pu_add_metabox_classes') );
 		}
 	}
 	
@@ -455,9 +440,134 @@ class CcPopUpAdmin {
 	 *
 	 * @since  0.1.0 
 	 */
-	function add_metabox_classes( $classes ) {
+	function chch_pu_add_metabox_classes( $classes ) {
  		array_push( $classes, "cc-pu-tab-2 cc-pu-tab" );
 		return $classes; 
+	}
+	
+	
+	/**
+	 * Return a pages_select field for CMB
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_render_pages_select( $field_args, $escaped_value, $object_id, $object_type, $field_type_object ) {
+		$all_pages = $this->get_all_pages();
+		 ?>
+		<select class="cmb_select" name="<?php echo $field_args['_name']; ?>[]" id="<?php echo $field_args['_id']; ?>" multiple="multiple">	
+		<?php
+			foreach($all_pages as $value => $title):
+				$selected = '';
+				if(!empty($escaped_value)){
+					if(in_array( $value,$escaped_value)) {
+						$selected = 'selected';	
+					} 
+				}
+			 	echo '<option value="'.$value.'" '.$selected .'>'.$title.'</option>	';
+			endforeach
+		 ?>
+			</select> 	 
+		<?php    
+	} 
+	
+	
+	/**
+	 * Return a cookie_select field for CMB
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_render_cookie_select( $field_args, $escaped_value, $object_id, $object_type, $field_type_object ) {
+		$cookie_expire = array(
+			'refresh' => 'Refresh',
+			'session' => 'Session',
+			'Day' => 'Day (Available in Pro)',
+			'Week' => 'Week (Available in Pro)',
+			'Month' => 'Month (Available in Pro)',
+			'Year' => 'Year (Available in Pro)',	
+		);
+		?>
+		
+		<select class="cmb_select" name="<?php echo $field_args['_name']; ?>" id="<?php echo $field_args['_id']; ?>">	
+		
+		<?php
+			foreach($cookie_expire as $value => $title):
+				$selected = '';
+				$disable = '';
+				
+				if(!empty($escaped_value)){
+					if($value == $escaped_value) {
+						$selected = 'selected';	
+					} 
+				}
+				
+				if($value != 'refresh' && $value != 'session') {
+					$disable = 'disabled';	
+				}
+				
+			 	echo '<option value="'.$value.'" '.$selected .' '.$disable.'>'.$title.'</option>';
+			endforeach
+		 ?>
+		 
+		</select> <a href="http://ch-ch.org/pupro" target="_blank">Get Pro</a>
+				 
+		<?php    
+	}
+	
+	/**
+	 * Return a pages_select field for CMB
+	 *
+	 * @since     1.0.0
+	 * 
+	 */
+	function chch_pu_render_newsletter_select( $field_args, $escaped_value, $object_id, $object_type, $field_type_object ) {
+		$newsletter_expire = array(
+			'Email' => 'Email',
+			'MailChimp' => 'MailChimp (Available in Pro)',
+			'GetResponse' => 'GetResponse (Available in Pro)',
+			'CampaingMonitor' => 'CampaingMonitor (Available in Pro)',
+			//'Database' => 'Database (Available in Pro)', 	
+		);
+		?>
+		
+		<select class="cmb_select" name="<?php echo $field_args['_name']; ?>" id="<?php echo $field_args['_id']; ?>">	
+		
+		<?php
+			foreach($newsletter_expire as $value => $title):
+				$selected = '';
+				$disable = '';
+				
+				if(!empty($escaped_value)){
+					if($value == $escaped_value) {
+						$selected = 'selected';	
+					} 
+				}
+				
+				if($value != 'Email') {
+					$disable = 'disabled';	
+				}
+				
+			 	echo '<option value="'.$value.'" '.$selected .' '.$disable.'>'.$title.'</option>';
+			endforeach
+		 ?>
+		 
+		</select> <a href="http://ch-ch.org/pupro" target="_blank">Get Pro</a>
+				 
+		<?php    
+	}
+	
+	/**
+	 * Remove help tabs from post view.
+	 *
+	 * @since     1.0.7
+	 * 
+	 */
+	function chch_pu_remove_help_tabs($old_help, $screen_id, $screen){
+		if ( 'post' == $screen->base && 'chch-pop-up' === $screen->post_type) {
+			$screen->remove_help_tabs();
+			return $old_help;
+		}
 	}
 	
 	/**
@@ -475,12 +585,13 @@ class CcPopUpAdmin {
 		return $pmd->plugin;
 	}
 	
+	
 	/**
 	 * Add Templates View
 	 *
 	 * @since  0.1.0 
 	 */
-	public function form_title( $post ) { 
+	public function chch_pu_templates_view( $post ) { 
 		  
 		$screen = get_current_screen();
 		if ( 'post' == $screen->base && 'chch-pop-up' === $screen->post_type) {
@@ -495,7 +606,7 @@ class CcPopUpAdmin {
 	 *
 	 * @since  0.1.0 
 	 */
-	function save_pop_up_meta( $post_id, $post, $update ) { 
+	function chch_pu_save_pop_up_meta( $post_id, $post, $update ) { 
 		if (
 			!isset($_POST['chch_pu_save_nonce']) 
 			|| ! wp_verify_nonce($_POST['chch_pu_save_nonce'],'chch_pu_save_nonce_'.$post_id) 
@@ -606,7 +717,7 @@ class CcPopUpAdmin {
 	 *
 	 * @since  0.1.0 
 	 */
-	public function admin_head_scripts() {
+	public function chch_pu_admin_head_scripts() {
 	 	$screen = get_current_screen();
 		if ( 'post' == $screen->base && 'chch-pop-up' === $screen->post_type) { 
 			
@@ -617,9 +728,9 @@ class CcPopUpAdmin {
 	 
 	/**
 	 * Register and enqueue admin-specific style sheet.
-	 
+	 *
 	 */
-	public function enqueue_cc_pu_admin_scripts() {
+	public function chch_pu_enqueue_admin_scripts() {
 
 		$screen = get_current_screen();
 		if ( 'post' == $screen->base && 'chch-pop-up' === $screen->post_type) { 
@@ -676,7 +787,7 @@ class CcPopUpAdmin {
 	 * Load preview by ajax
 	 *
 	 */
-	function cc_pu_load_preview_module() {
+	function chch_pu_load_preview_module() {
  
 		$template = $_POST['template'];
 		$template_base = $_POST['base'];

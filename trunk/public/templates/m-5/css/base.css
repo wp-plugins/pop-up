@@ -213,9 +213,9 @@
   }
   .m-5 .cc-pu-smart-form .cc-pu-btn {
     top: auto !important;
-    bottom: 6px;
-    left: 0;
-    right: 0;
+    bottom: 6px !important;
+    left: 0 !important;
+    right: 0 !important;
     display: block;
     width: 97%;  
     margin: 0 auto;  
