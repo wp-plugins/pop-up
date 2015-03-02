@@ -282,7 +282,7 @@ class CcPopUpAdmin {
 		
 		$domain = $this->plugin_slug; 
 		$prefix = '_chch_pop_up_';
-	
+		
 		/**
 		 * GENERAL OPTIONS
 		 */
@@ -319,7 +319,7 @@ class CcPopUpAdmin {
 					'type' => 'checkbox',
 				),
 				array(
-					'name'       => __( 'Appear after', $domain ),
+					'name'       => __( 'Show after', $domain ),
 					'desc'    => __( 'seconds', $domain  ),
 					'id'         => $prefix . 'timer',
 					'type'       => 'text_small', 
@@ -456,10 +456,19 @@ class CcPopUpAdmin {
 		$all_pages = $this->get_all_pages();
 		 ?>
 		<select class="cmb_select" name="<?php echo $field_args['_name']; ?>[]" id="<?php echo $field_args['_id']; ?>" multiple="multiple">	
+			<?php 
+			$selected = '';
+			if(!empty($escaped_value) && is_array($escaped_value)){
+				if(in_array( 'chch_home',$escaped_value)) {
+					$selected = 'selected';	
+				}
+			}
+			?>
+			<option value="chch_home" <?php echo $selected ?>>Home (Latest Posts)</option>
 		<?php
 			foreach($all_pages as $value => $title):
 				$selected = '';
-				if(!empty($escaped_value)){
+				if(!empty($escaped_value) && is_array($escaped_value)){
 					if(in_array( $value,$escaped_value)) {
 						$selected = 'selected';	
 					} 
@@ -526,8 +535,7 @@ class CcPopUpAdmin {
 			'Email' => 'Email',
 			'MailChimp' => 'MailChimp (Available in Pro)',
 			'GetResponse' => 'GetResponse (Available in Pro)',
-			'CampaingMonitor' => 'CampaingMonitor (Available in Pro)',
-			//'Database' => 'Database (Available in Pro)', 	
+			'CampaingMonitor' => 'CampaingMonitor (Available in Pro)',  	
 		);
 		?>
 		

@@ -191,7 +191,7 @@ class CcPopUpPeview {
 							'name'   => 'privacy_link',  
 							'target' => '.cc-pu-privacy-info a', 
 							'attr' => 'href',
-							'desc'   => 'Privacy Policy Link:',
+							'desc'   => 'Privacy Policy Link (if there is no URL provided, the link will not be displayed):',
 						),
 					),
 				), 

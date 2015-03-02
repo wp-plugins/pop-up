@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.8';
+	const VERSION = '1.0.9';
 
 	/** 
 	 *
@@ -370,10 +370,22 @@ class CcPopUp {
 				}
 				
 				$pages = get_post_meta( $id, '_chch_pop_up_page', true);
+				
 				if(is_array( $pages)){
+					if(is_home()) {
+						if(in_array('chch_home', $pages)) {
+							continue; 	
+						} else {
+							$array_key = array_search(get_the_ID(), $pages);
+							if($array_key){
+								unset($pages[$array_key]);	
+							}
+						} 	
+					} 
+					
 					if(in_array(get_the_ID(), $pages)){
 						continue;		
-					}
+					} 
 				}
 				
 				
