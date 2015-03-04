@@ -5,7 +5,7 @@ Contributors: chopchoporg
 Tags: popup, popups, pop-up, pop-ups, pop up, pop ups, modal, modal window, wordpress popup, responsive popup, conversion, mailing
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,10 +64,8 @@ Our exit-intent technology detects user behavior and prompts them with a targete
 * 6 professional pop-up designs
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (size, fonts, buttons, colours, content, background)
-* 1410 custom fonts
-* Pop-up performance stats (views, conversions, conversion rate)
-* MailChimp integration
-* Storing emails in WordPress database
+* All Google Web Fonts
+* Pop-up performance stats
 
 
 **On Scroll Pop-Up CC Pro**
@@ -80,10 +78,11 @@ The pop-up will appear when a user scrolls to a given class or id.
 * 6 professional pop-up designs
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (size, fonts, buttons, colours, content, background)
-* Google Fonts integration
-* Pop-up performance stats (views, conversions, conversion rate)
-* MailChimp integration
-* Storing emails in WordPress database
+* All Google Web Fonts
+* Pop-up performance stats 
+* MailChimp integration 
+* GetResponse integration 
+* Campaign Monitor integration 
 
 
 **On Click Pop-Up CC Pro**
@@ -96,10 +95,8 @@ The pop-up will appear when a user clicks a given class or id. Perfect for displ
 * 6 professional pop-up designs
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (size, fonts, buttons, colours, content, background)
-* 1410 custom fonts
-* Pop-up performance stats (views, conversions, conversion rate)
-* MailChimp integration
-* Storing emails in WordPress database
+* All Google Web Fonts
+* Pop-up performance stats
 
 
 Would you like to know when they are ready?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab 5% OFF code.
@@ -168,6 +165,10 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 
 == Changelog ==
+
+= 1.1.0 =
+Ajax fix
+Speed optimization
 
 = 1.0.9 =
 template fixes

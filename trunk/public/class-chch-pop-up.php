@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.9';
+	const VERSION = '1.1.0';
 
 	/** 
 	 *
@@ -311,7 +311,7 @@ class CcPopUp {
 			
 			if(file_exists(CC_PU_PLUGIN_DIR . 'public/assets/js/public.js')){	
 				wp_enqueue_script( $this->plugin_slug .'public-script', CC_PU_PLUGIN_URL . 'public/assets/js/public.js', array('jquery') ); 
-				wp_localize_script( $this->plugin_slug .'public-script', 'ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' )) );
+				wp_localize_script( $this->plugin_slug .'public-script', 'chch_pu_ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ), 'chch_pop_up_url' => CC_PU_PLUGIN_URL) );
 			}
 			 
 		
