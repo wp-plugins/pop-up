@@ -52,7 +52,7 @@ jQuery(document).ready( function ($) {
 		nounce = thisEl.attr('data-nounce'); 
 		
 		$.ajax({
-            url: ajax_object.ajaxUrl,
+            url: chch_pu_ajax_object.ajaxUrl,
             async: true,
             type: "POST",
             data: {
@@ -64,9 +64,18 @@ jQuery(document).ready( function ($) {
 				
             },
             success: function(data) { 
+			
+				if(!$('#'+base+'-css').length) { 
+					$('head').append('<link rel="stylesheet" id="'+base+'-css"  href="'+chch_pu_ajax_object.chch_pop_up_url+'public/templates/'+base+'/css/base.css" type="text/css" media="all" />');
+				}
+				
+				if(!$('#'+template+'-css').length) { 
+					$('head').append('<link rel="stylesheet" id="'+template+'-css"  href="'+chch_pu_ajax_object.chch_pop_up_url+'public/templates/'+base+'/'+template+'/css/style.css" type="text/css" media="all" />');
+				}
+				
 			 	theme = thisEl.closest('.theme');
 				previewWrapper = $('#cc-pu-customize-form-'+template); 
-                $('#cc-pu-customize-preview-'+template).append(data);
+                $('#cc-pu-customize-preview-'+template).html(data);
 				
 				$('.theme').removeClass('active');
 				theme.addClass('active');  

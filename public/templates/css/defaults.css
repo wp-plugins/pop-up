@@ -110,5 +110,10 @@
   outline: none !important;
   cursor: pointer !important;
 }
+
+#poststuff .modal-inner h2, #poststuff .modal-inner h3  {
+    color: inherit;
+    float: none;
+}
  
 

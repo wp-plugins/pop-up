@@ -751,7 +751,7 @@ class CcPopUpAdmin {
 			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), CcPopUp::VERSION );
 			
 			wp_enqueue_script( $this->plugin_slug .'-admin-scripts', plugins_url( 'assets/js/chch-admin.js', __FILE__ ), array( 'jquery', 'wp-color-picker' ), CcPopUp::VERSION );  
-			wp_localize_script( $this->plugin_slug .'-admin-scripts', 'ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' )) );
+			wp_localize_script( $this->plugin_slug .'-admin-scripts', 'chch_pu_ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ), 'chch_pop_up_url' => CC_PU_PLUGIN_URL) );
 			
 			wp_enqueue_style( $this->plugin_slug .'-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css', null, CcPopUp::VERSION,'all' );
 			
@@ -763,29 +763,7 @@ class CcPopUpAdmin {
 			if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/css/fonts.css'))
 			{
 				wp_enqueue_style($this->plugin_slug .'_template_fonts', CC_PU_PLUGIN_URL . 'public/templates/css/fonts.css', null, CcPopUp::VERSION, 'all');  
-			}
-			
-			$templates = $this->get_templates();
-			
-			if(count($templates))
-			{	
-				if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/m-5/css/base.css'))
-				{
-					wp_enqueue_style($this->plugin_slug .'_base_m-5', CC_PU_PLUGIN_URL . 'public/templates/m-5/css/base.css', null, CcPopUp::VERSION, 'all');  
-				}
-				
-				foreach($templates as $template)
-				{
-					$template_id = $template['id'];
-					$base = $template['base'];
-					
-					
-					if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/'.$base.'/'.$template_id.'/css/style.css'))
-					{
-					wp_enqueue_style($this->plugin_slug .'_style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');
-					}
-				}
-			}
+			}  
 		}  
 
 	}
@@ -801,8 +779,7 @@ class CcPopUpAdmin {
 		$template_base = $_POST['base'];
 		$popup = $_POST['id'];
 		
-		$template = new CcPopUpTemplate($template,$template_base,$popup);
-		$template->build_css();
+		$template = new CcPopUpTemplate($template,$template_base,$popup); 
 		$template->get_template();	
 		die();
 	}

@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 		
 		
 		$.ajax({
-            url: ajax_object.ajaxUrl,
+            url: chch_pu_ajax_object.ajaxUrl,
             async: true,
             type: "POST",
             data: {
