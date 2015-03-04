@@ -1,7 +1,7 @@
 
 jQuery(document).ready(function($) { 
 
-    $( ".cc-pu-newsletter-form" ).submit(function( event ) {
+    $( ".cc-puf-newsletter-form" ).submit(function( event ) {
 		
 		email = $(this).find('.cc-pu-form-control').val();
 		nounce = $(this).find('#_ajax_nonce').val();
@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
 		event.preventDefault();
 	});
 	
-	$( ".cc-pu-close" ).click(function( e ) {
+	$( ".cc-puf-close" ).click(function( e ) {
 		e.preventDefault();
 		
 		chchPopUpID = $(this).attr('data-modalID'); 

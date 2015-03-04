@@ -23,7 +23,7 @@
 		}
 		
 		?>
-		<a class="cc-pu-close" data-modalId="<?php echo $id; ?>" data-views-control="yes" data-expires-control="<?php echo $views_control ?>">  <i class="fa fa-times"></i> </a>  
+		<a class="cc-pu-close cc-puf-close" data-modalId="<?php echo $id; ?>" data-views-control="yes" data-expires-control="<?php echo $views_control ?>">  <i class="fa fa-times"></i> </a>  
 		
 		<?php $content = $template_options['contents']; ?>
 		<div class="cc-pu-header-section"> 
@@ -41,7 +41,7 @@
 		<?php if(get_post_meta($id,'_chch_pop_up_newsletter',true) != 'no'):?>	
 			
 			<?php if(!is_admin()):?>
-			<form action="#" class="cc-pu-newsletter-form" method="post">
+			<form action="#" class="cc-pu-newsletter-form cc-puf-newsletter-form" method="post">
 			<?php else:?>
 			<div class="cc-pu-newsletter-form">
 			<?php endif;?>
