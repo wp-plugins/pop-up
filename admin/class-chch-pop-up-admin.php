@@ -384,13 +384,7 @@ class CcPopUpAdmin {
 			'context'    => 'normal',
 			'priority'   => 'high',
 			'show_names' => true,  
-			'fields'     => array(
-				array(
-					'name' => __( 'Save emails to:', $domain  ),
-					'desc'    => __( '', $domain  ),
-					'id'   => $prefix . 'save_emails',
-					'type' => 'newsletter_select', 
-				),  
+			'fields'     => array( 
 				array(
 					'name'    => __( 'Newsletter Status:', $domain ),
 					'desc'    => __( 'Enable or disable newsletter subscribe form on the front-end.', $domain  ),
@@ -401,6 +395,12 @@ class CcPopUpAdmin {
 						'yes' => __( 'Active', $domain ),
 						'no'   => __( 'Inactive', $domain ), 
 					),
+				),
+				array(
+					'name' => __( 'Save emails to:', $domain  ),
+					'desc'    => __( '', $domain  ),
+					'id'   => $prefix . 'save_emails',
+					'type' => 'newsletter_select', 
 				),
 				array(
 					'name' => __( 'E-mail Address:', $domain  ),

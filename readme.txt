@@ -5,7 +5,7 @@ Contributors: chopchoporg
 Tags: popup, popups, pop-up, pop-ups, pop up, pop ups, modal, modal window, wordpress popup, responsive popup, conversion, mailing
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,19 +42,19 @@ Pop-Up CC is a perfect solution to capture the audience’s attention in the rig
 * Email notifications
 * Turn on/off the pop-ups on mobile devices
 
-
-...and more.
-
-
 **Need more?**
 
 
-[Get Pop-Up CC Pro](https://shop.chop-chop.org/pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=pop-up-free&utm_campaign=wordpressorg-free-plugin)
-
-Stay tuned for more flavors of Pop-Up CC Pro:
+**Pop-Up CC Pro**
 
 
-**Close Attempt Pop-Up CC Pro**
+[Get Pop-Up CC Pro](https://shop.chop-chop.org/pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=pop-up-free&utm_campaign=wordpressorg-free-plugin) for more customization options and MailChimp, GetResponse and Campaing Monitor integration.
+
+
+Get more flavors of Pop-Up CC Pro:
+
+
+**Pop-Up CC Pro Exit Intent**
 
 
 Our exit-intent technology detects user behavior and prompts them with a targeted campaign at the very moment they are about to leave.
@@ -67,11 +67,13 @@ Our exit-intent technology detects user behavior and prompts them with a targete
 * All Google Web Fonts
 * Pop-up performance stats
 
+[Get Pop-Up CC Pro Exit Intent](https://shop.chop-chop.org/exit-intent-pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=exit-intent-pop-up&utm_campaign=wordpressorg)
 
-**On Scroll Pop-Up CC Pro**
+
+**Pop-Up CC Pro Scroll**
 
 
-The pop-up will appear when a user scrolls to a given class or id.
+The pop-up will appear when a user scrolls to a given class or id, scrolls down a given number of pixels from top or scrolls down to a certain percentage of the page height.
 
 
 * Trigger the pop-up on scroll
@@ -84,8 +86,11 @@ The pop-up will appear when a user scrolls to a given class or id.
 * GetResponse integration 
 * Campaign Monitor integration 
 
+[Get Pop-Up CC Pro Scroll](https://shop.chop-chop.org/on-scroll-pop-up/?utm_source=wordpressorg&utm_medium=on-scroll-pop-up&utm_campaign=wordpressorg)
 
-**On Click Pop-Up CC Pro**
+Stay tuned for our upcoming Pop-Up CC Pro plugin:
+
+**Pop-Up CC Pro Click**
 
 
 The pop-up will appear when a user clicks a given class or id. Perfect for displaying promo or demo videos.
@@ -94,12 +99,12 @@ The pop-up will appear when a user clicks a given class or id. Perfect for displ
 * Trigger the pop-up on click
 * 6 professional pop-up designs
 * Elaborate custom visual editor with live pop-up preview
-* Highly customizable pop-ups (size, fonts, buttons, colours, content, background)
+* Highly customizable pop-ups (fonts, button, colours, content, background)
 * All Google Web Fonts
 * Pop-up performance stats
 
 
-Would you like to know when they are ready?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab 5% OFF code.
+Would you like to know when it's ready?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab a 5% OFF code.
 
 
 == Installation ==
@@ -165,6 +170,11 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 
 == Changelog ==
+
+= 1.1.1 =
+intro/outro fade
+new thumbnails 
+newsletter section fix 
 
 = 1.1.0 =
 Ajax fix

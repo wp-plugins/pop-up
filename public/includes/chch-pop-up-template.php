@@ -117,16 +117,13 @@ class CcPopUpTemplate {
 		$script .= $mobile_header;
 		
 		$script .= 'setTimeout(function(){
-				
-		
-			$("#modal-'.$id.'").show();
-						 windowPos = $(window).scrollTop();
-						 windowHeight = $(window).height();
-						 popupHeight = $( "#modal-'.$id.' .modal-inner" ).outerHeight();
-						 popupPosition = windowPos + ((windowHeight - popupHeight)/2);
-						 $( "#modal-'.$id.' .pop-up-cc").css("top",Math.abs(popupPosition)); 
-				  		
-					}, '.$timer.');  ';
+			 $("#modal-'.$id.'").show("fast");
+			 windowPos = $(window).scrollTop();
+			 windowHeight = $(window).height();
+			 popupHeight = $( "#modal-'.$id.' .modal-inner" ).outerHeight();
+			 popupPosition = windowPos + ((windowHeight - popupHeight)/2);
+			 $( "#modal-'.$id.' .pop-up-cc").css("top",Math.abs(popupPosition)); 
+		}, '.$timer.');  ';
 		$script .= $mobile_footer;
 		
 		if(get_post_meta($id, '_chch_pop_up_show_once_per',true)) {
