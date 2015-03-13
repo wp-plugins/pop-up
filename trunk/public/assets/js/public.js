@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
 			}
 		}
 		
-		$("#modal-"+chchPopUpID).hide();
+		$("#modal-"+chchPopUpID).hide("fast");
 		
 	});
 	
