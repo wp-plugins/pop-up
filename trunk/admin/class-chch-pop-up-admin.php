@@ -404,7 +404,7 @@ class CcPopUpAdmin {
 				),
 				array(
 					'name' => __( 'E-mail Address:', $domain  ),
-					'desc'    => __( 'Subscription notifications will be sent to this email. If there is no email provided, admin email will be used.', $domain  ),
+					'desc'    => __( '<br>Subscription notifications will be sent to this email. If there is no email provided, admin email will be used.', $domain  ),
 					'id'   => $prefix . 'email',
 					'type' => 'text_medium',
 				), 
@@ -677,7 +677,8 @@ class CcPopUpAdmin {
 				'subheader' => wp_kses_post(str_replace($p_array, '', $_REQUEST['_'.$template.'_contents_subheader'])),   
 				'content' => wp_kses_post($_REQUEST['_'.$template.'_contents_content']),  
 				'privacy_message' => wp_kses_post(str_replace($p_array, '', $_REQUEST['_'.$template.'_contents_privacy_message'])),  
-				'privacy_link' => sanitize_text_field($_REQUEST['_'.$template.'_contents_privacy_link']),   
+				'privacy_link' => sanitize_text_field($_REQUEST['_'.$template.'_contents_privacy_link']),
+				'thank_you' => sanitize_text_field($_REQUEST['_'.$template.'_contents_thank_you']),     
 			); 
 			 
 			update_post_meta($post_id, '_'.$template.'_template_data', $template_data);	

@@ -47,7 +47,8 @@
 			<?php endif;?>
 			
 				<div class="cc-pu-form-group cc-pu-smart-form"> 
-					<div class="cc-pu-thank-you"><p><?php  _e('<strong>Thank you!</strong>'); ?></p></div>
+					<?php $thank_you = $this -> get_template_option('contents','thank_you'); ?>
+					<div class="cc-pu-thank-you"><p><?php echo $thank_you; ?></p></div>
 					<div class="cc-pu-error-message"><p><strong>WRONG EMAIL FORMAT!</strong></p></div>
 					<i class="fa fa-envelope"></i>
 					<?php $input = $template_options['input']; ?>
@@ -66,7 +67,10 @@
 			<?php endif;?>	
 		
 		<?php endif;?>
-		<footer class="cc-pu-privacy-info"> <a href="<?php echo $content['privacy_link'];?>">Privacy policy</a>
+		<footer class="cc-pu-privacy-info"> 
+			<?php if(!empty($content['privacy_link'])):?>
+			<a href="<?php echo $content['privacy_link'];?>">Privacy policy</a>
+			<?php endif;?>
 			<div class="cc-pu-privacy-section"> 
 				<p><?php echo $content['privacy_message'];?></p>
 			</div>

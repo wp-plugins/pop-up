@@ -37,6 +37,26 @@ class CcPopUpTemplate {
 		return $options;
 	} 
 	
+	function get_template_option($base, $option){
+		
+		$all_options = $this->get_template_options();
+		
+		if(isset($all_options[$base][$option])){
+			
+			return $all_options[$base][$option];
+			
+		} elseif(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/'.$this->template_base.'/'.$this->template.'/defaults.php')) {
+			
+			$default_options = (include(CC_PU_PLUGIN_DIR . 'public/templates/'.$this->template_base.'/'.$this->template.'/defaults.php'));
+			
+			if(isset($default_options[$base][$option])){ 
+				return $default_options[$base][$option];
+			}
+		}
+		 
+		return '';
+	} 
+	
 	
 	function get_template(){ 
 		$template_options = $this->get_template_options();
