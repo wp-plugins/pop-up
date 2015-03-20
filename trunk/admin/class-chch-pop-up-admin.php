@@ -367,7 +367,7 @@ class CcPopUpAdmin {
 				),
 				array(
 					'name' => __( 'Disable on:', $domain  ),
-					'desc'    => __( 'Decide on which pages the pop-up will not be visible.', $domain  ),
+					'desc'    => __( 'Decide on which pages the pop-up will not be visible. <br> Hold the ctrl key and click to select the pages which should not display the pop-up.', $domain  ),
 					'id'   => $prefix . 'page',
 					'type' => 'pages_select',  
 				), 
@@ -478,6 +478,7 @@ class CcPopUpAdmin {
 		 ?>
 			</select> 	 
 		<?php    
+		echo $field_type_object->_desc( true );
 	} 
 	
 	
