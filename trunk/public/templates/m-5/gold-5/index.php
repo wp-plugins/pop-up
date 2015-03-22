@@ -34,8 +34,8 @@
 			<h3><?php echo $content['subheader'];?></h3>
 		</div>
 		
-		<div class="cc-pu-content-section <?php echo get_the_ID();?>"> 
-			<?php echo $content['content'];?>
+		<div class="cc-pu-content-section"> 
+			<?php echo wpautop($content['content']);?>
 		</div>
 		
 		<?php if(get_post_meta($id,'_chch_pop_up_newsletter',true) != 'no'):?>
