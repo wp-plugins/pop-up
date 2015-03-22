@@ -672,12 +672,17 @@ class CcPopUpAdmin {
 			);
 			
 			$p_array = array('</p>','<p>');
+			
+			$header_content = wpautop($_REQUEST['_'.$template.'_contents_header']);
+			$subheader_content = wpautop($_REQUEST['_'.$template.'_contents_subheader']);
+			$privacy_message_content = wpautop($_REQUEST['_'.$template.'_contents_privacy_message']);
+			$main_content = wpautop($_REQUEST['_'.$template.'_contents_content']);
 		 
 			$template_data['contents']= array(
-				'header' => wp_kses_post(str_replace($p_array, '', $_REQUEST['_'.$template.'_contents_header'])),  
-				'subheader' => wp_kses_post(str_replace($p_array, '', $_REQUEST['_'.$template.'_contents_subheader'])),   
-				'content' => wp_kses_post($_REQUEST['_'.$template.'_contents_content']),  
-				'privacy_message' => wp_kses_post(str_replace($p_array, '', $_REQUEST['_'.$template.'_contents_privacy_message'])),  
+				'header' => wp_kses_post(str_replace($p_array, '', $header_content)),  
+				'subheader' => wp_kses_post(str_replace($p_array, '', $subheader_content)),   
+				'content' => wp_kses_post($main_content),  
+				'privacy_message' => wp_kses_post(str_replace($p_array, '', $privacy_message_content)),  
 				'privacy_link' => sanitize_text_field($_REQUEST['_'.$template.'_contents_privacy_link']),
 				'thank_you' => sanitize_text_field($_REQUEST['_'.$template.'_contents_thank_you']),     
 			); 

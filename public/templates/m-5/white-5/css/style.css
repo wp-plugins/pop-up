@@ -73,7 +73,7 @@
   background-color: #fff !important;
   font-family: "Open Sans", sans-serif !important;
 }
-.white-5 .cc-pu-smart-form .cc-pu-btn, .white-5 .cc-pu-smart-form .cc-pu-btn {
+.white-5 .cc-pu-smart-form .cc-pu-btn, .white-5 .cc-pu-smart-form .cc-pu-btn:hover {
   background: #000 !important;
   color: #fff !important;
   padding: 0 35px !important; 
