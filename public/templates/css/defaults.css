@@ -110,6 +110,11 @@
   outline: none !important;
   cursor: pointer !important;
 }
+ 
+button.cc-pu-btn:hover {
+  background: transparent;
+  border: 0;
+}
 
 #poststuff .modal-inner h2, #poststuff .modal-inner h3  {
     color: inherit;

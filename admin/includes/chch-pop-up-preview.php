@@ -891,7 +891,7 @@ class CcPopUpPeview {
 		);
 						 
 		echo '<label><span class="customize-control-title">'.$field['desc'].'</span>';
-		 wp_editor( $options[$field['name']], $field['name'].'_'.$template, $settings ); 
+		 wp_editor( wpautop($options[$field['name']]), $field['name'].'_'.$template, $settings ); 
 	  
 		echo '</label>';
 		$option_html = ob_get_clean();					

@@ -57,7 +57,8 @@
 					
 					<?php $button = $template_options['button']; ?>
 					<?php $auto_close = get_post_meta($id,'_chch_pop_up_auto_closed',true) ? 'yes' : 'no'; ?>
-					<button type="submit" class="cc-pu-btn" data-auto-close="<?php echo $auto_close; ?>"><?php echo $button['text'];?></button>
+					<?php $auto_close_time = get_post_meta($id,'_chch_pop_up_close_timer',true) ? get_post_meta($id,'_chch_pop_up_close_timer',true) : '0'; ?>
+					<button type="submit" class="cc-pu-btn" data-auto-close="<?php echo $auto_close; ?>" data-auto-close-time="<?php echo $auto_close_time; ?>"><?php echo $button['text'];?></button>
 				</div>
 				
 			<?php if(!is_admin()):?>

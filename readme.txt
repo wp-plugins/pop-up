@@ -100,8 +100,7 @@ The pop-up will appear when a user clicks a given class or id. Perfect for displ
 * 6 professional pop-up designs
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (fonts, button, colours, content, background)
-* All Google Web Fonts
-* Pop-up performance stats
+* All Google Web Fonts 
 
 
 Would you like to know when it's ready?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab a 5% OFF code.
@@ -170,6 +169,10 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 
 == Changelog ==
+
+= 1.1.5 =
+Add close timeout option
+Template fix
 
 = 1.1.4 =
 css fix

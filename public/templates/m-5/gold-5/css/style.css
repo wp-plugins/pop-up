@@ -1,7 +1,7 @@
 /*** Base ***/
 
 .gold-5 a, .gold-5 a:hover {
-  color: #000;
+  color: #000 !important;
   font-weight: bold;
 }
 

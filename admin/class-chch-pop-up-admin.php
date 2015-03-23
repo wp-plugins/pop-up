@@ -336,7 +336,14 @@ class CcPopUpAdmin {
 					'desc'    => __( '', $domain  ),
 					'id'   => $prefix . 'auto_closed',
 					'type' => 'checkbox', 
-				),   
+				),  
+				array(
+					'name'       => __( 'Close after:', $domain ),
+					'desc'    => __( 'seconds', $domain  ),
+					'id'         => $prefix . 'close_timer',
+					'type'       => 'text_small', 
+					'default' => '0'
+				),  
 			),
 
 		); 	
@@ -676,12 +683,12 @@ class CcPopUpAdmin {
 			$header_content = wpautop($_REQUEST['_'.$template.'_contents_header']);
 			$subheader_content = wpautop($_REQUEST['_'.$template.'_contents_subheader']);
 			$privacy_message_content = wpautop($_REQUEST['_'.$template.'_contents_privacy_message']);
-			$main_content = wpautop($_REQUEST['_'.$template.'_contents_content']);
+			$main_content = $_REQUEST['_'.$template.'_contents_content'];
 		 
 			$template_data['contents']= array(
 				'header' => wp_kses_post(str_replace($p_array, '', $header_content)),  
 				'subheader' => wp_kses_post(str_replace($p_array, '', $subheader_content)),   
-				'content' => wp_kses_post($main_content),  
+				'content' => $main_content,  
 				'privacy_message' => wp_kses_post(str_replace($p_array, '', $privacy_message_content)),  
 				'privacy_link' => sanitize_text_field($_REQUEST['_'.$template.'_contents_privacy_link']),
 				'thank_you' => sanitize_text_field($_REQUEST['_'.$template.'_contents_thank_you']),     

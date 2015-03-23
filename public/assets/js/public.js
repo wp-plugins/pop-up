@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
 		thanks = $(this).find('.cc-pu-thank-you'); 
 		errorMessage = $(this).find('.cc-pu-error-message'); 
 		autoClose = $(this).find('.cc-pu-btn').attr('data-auto-close'); 
+		closeTimeOut = $(this).find('.cc-pu-btn').attr('data-auto-close-time') * 1000; 
 		closeButton = $(this).closest('.modal-inner').find('.cc-pu-close');
 		
 		
@@ -33,7 +34,7 @@ jQuery(document).ready(function($) {
 					if(autoClose === 'yes'){
 						setTimeout(function(){  
 							closeButton.trigger('click');		
-						}, 2000); 
+						}, closeTimeOut); 
 					}
 					
 				} else {

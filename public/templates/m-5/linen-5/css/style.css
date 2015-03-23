@@ -1,7 +1,7 @@
 /*** Base ***/
 
 .linen-5 a, .linen-5 a:hover {
-  color: #000;
+  color: #000 !important;
   font-weight: bold;
 }
 
@@ -87,6 +87,10 @@
 
 .pop-up-cc .cc-pu-thank-you {
     background-color: #514b31;
+}
+
+.pop-up-cc .cc-pu-thank-you p{ 
+	color:#000 !important;
 }
 
 .pop-up-cc .cc-pu-thank-you:after {  
