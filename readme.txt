@@ -170,7 +170,7 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 == Changelog ==
 
-= 1.1.5 =
+= 1.1.6 =
 Add close timeout option
 Template fix
 
