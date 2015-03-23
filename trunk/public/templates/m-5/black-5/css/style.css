@@ -1,6 +1,6 @@
  
 .black-5 a, .black-5 a:hover {
-  color: #fff;
+  color: #fff !important;
   font-weight: bold;
 }
 /*** General ***/
@@ -85,7 +85,7 @@
     background-color: #fff;
 }
 .pop-up-cc .cc-pu-thank-you p{ 
-	color:#000;
+	color:#000 !important;
 }
 
 .pop-up-cc .cc-pu-thank-you:after {  

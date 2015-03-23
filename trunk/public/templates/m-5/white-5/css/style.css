@@ -1,7 +1,7 @@
 /*** Base ***/
 
 .white-5 a, .white-5 a:hover {
-  color: #000;
+  color: #000 !important;
   font-weight: bold;
 }
 /*** General ***/

@@ -1,7 +1,7 @@
 /*** Base ***/
 
 .aqua-5 a, .aqua-5 a:hover {
-  color: #090909;
+  color: #090909 !important;
 }
 
 /*** General ***/
@@ -98,10 +98,10 @@
 }
 
 .pop-up-cc .cc-pu-thank-you {
-    background-color: #59d5ef;
+    background-color: #59d5ef !important;
 }
 
-.pop-up-cc .cc-pu-thank-you {
+.pop-up-cc .cc-pu-thank-you p{
     color:#fff !important;
 }
 

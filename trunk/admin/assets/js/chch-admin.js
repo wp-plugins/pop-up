@@ -90,6 +90,19 @@ jQuery(document).ready( function ($) {
         }); 
 	});
 	 
+	
+	$('#_chch_pop_up_auto_closed').on('change', function(){ 
+		var target = $('.cmb_id__chch_pop_up_close_timer'); 
+		
+		if($(this).is(':checked')){
+			$(target).removeClass('hide-section');	
+		} else {
+			$(target).addClass('hide-section');	
+		}
+	}); 
+	
+	$('#_chch_pop_up_auto_closed').trigger('change'); 
+	
 	/////LIVE PREVIEW SCRIPTS
 		  $( ".accordion-section-title" ).on('click', function(e){
 		  
