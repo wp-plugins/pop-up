@@ -5,7 +5,7 @@ Contributors: chopchoporg
 Tags: popup, popups, pop-up, pop-ups, pop up, pop ups, modal, modal window, wordpress popup, responsive popup, conversion, mailing
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,7 +65,7 @@ Our exit-intent technology detects user behavior and prompts them with a targete
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (size, fonts, buttons, colours, content, background)
 * All Google Web Fonts
-* Pop-up performance stats
+* Two individually customizable buttons
 
 [Get Pop-Up CC Pro Exit Intent](https://shop.chop-chop.org/exit-intent-pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=exit-intent-pop-up&utm_campaign=wordpressorg)
 
@@ -88,7 +88,6 @@ The pop-up will appear when a user scrolls to a given class or id, scrolls down 
 
 [Get Pop-Up CC Pro Scroll](https://shop.chop-chop.org/on-scroll-pop-up/?utm_source=wordpressorg&utm_medium=on-scroll-pop-up&utm_campaign=wordpressorg)
 
-Stay tuned for our upcoming Pop-Up CC Pro plugin:
 
 **Pop-Up CC Pro Click**
 
@@ -101,9 +100,12 @@ The pop-up will appear when a user clicks a given class or id. Perfect for displ
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (fonts, button, colours, content, background)
 * All Google Web Fonts 
+* Embed codes and plain text support
+
+[Get Pop-Up CC Pro Click](https://shop.chop-chop.org/on-click-pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=on-click-pop-up&utm_campaign=wordpressorg)
 
 
-Would you like to know when it's ready?  [Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab a 5% OFF code.
+[Sign up to our newsletter](https://shop.chop-chop.org/?utm_source=wordpressorg&utm_medium=link&utm_campaign=available-in-pro) and grab a 5% OFF code for our plugins.
 
 
 == Installation ==
@@ -169,8 +171,11 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 
 == Changelog ==
+ 
+= 1.1.6 = 
+Template fix
 
-= 1.1.6 =
+= 1.1.5 =
 Add close timeout option
 Template fix
 
