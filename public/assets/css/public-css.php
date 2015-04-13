@@ -56,9 +56,7 @@
 		
 		// Remove space after colons
 		$css = str_replace(': ', ':', $css);
-		
-		// Remove whitespace
-		$css = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $css);
+		 
 		 
 		echo $css;
 		
