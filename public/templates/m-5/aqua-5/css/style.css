@@ -57,7 +57,8 @@
 .aqua-5 .modal-inner h3 {
   font-size: 1.42857em !important;
   line-height: 1.5em !important;
-  font-weight: 700 !important; 
+  font-weight: 700 !important;
+  color: inherit !important;
   color: #090909 !important;
   font-family: 'Roboto', sans-serif !important;
   text-transform: none !important;
@@ -96,22 +97,22 @@
   font-weight: 700 !important;
 }
 
-.aqua-5 .cc-pu-thank-you {
+.pop-up-cc .cc-pu-thank-you {
     background-color: #59d5ef !important;
 }
 
-.aqua-5 .cc-pu-thank-you p{
+.pop-up-cc .cc-pu-thank-you p{
     color:#fff !important;
 }
 
-.aqua-5 .cc-pu-thank-you:after {  
+.pop-up-cc .cc-pu-thank-you:after {  
      border-top: 8px solid #59d5ef; 
 }
 
 @media only screen and (min-width: 768px) {
 	  
 
-   .aqua-5 .cc-pu-thank-you:after {  
+   .pop-up-cc  .cc-pu-thank-you:after {  
       border-bottom: 8px solid #59d5ef;
 	  border-top: none;	   	
     }

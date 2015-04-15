@@ -69,7 +69,7 @@ class CcPopUpTemplate {
 		$template = $this->template_base;
 		
 		$prefix = '#modal-'.$this->post_id.' ';
-		$css = '';
+		$css = '<style>';
 		$size_options = $options['size'];
 		if($size_options['custom'])
 		{
@@ -98,8 +98,10 @@ class CcPopUpTemplate {
 			} 	
 		$css .= '}';
 		 
+		 
+		$css .= '</style>';
 	
-		return $css;  
+		echo $css;  
 	}
 	
 	function build_js()
@@ -123,8 +125,10 @@ class CcPopUpTemplate {
 			$mobile_header = 'if($(window).width() < 1025){'; 
 			$mobile_footer = '}';
 		}
-		 
-		$script = 'jQuery(function($) {';
+		
+		
+		$script = '<script type="text/javascript">';
+		$script .= 'jQuery(function($) {';
 		
 		if(get_post_meta($id, '_chch_pop_up_show_once_per',true)) {
 			$script .= 'if(!$.cookie("shown_modal_'.$id.'")){ ';
@@ -145,9 +149,10 @@ class CcPopUpTemplate {
 		if(get_post_meta($id, '_chch_pop_up_show_once_per',true)) {
 			$script .= '}';
 		}
-		$script .= '});'; 
+		$script .= '});';
+		$script .= '</script>'; 
 		
-		return $script;		
+		echo $script;		
 	}
 	
 	

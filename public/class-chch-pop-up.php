@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.2.0';
+	const VERSION = '1.2.1';
 
 	/** 
 	 *
@@ -252,7 +252,7 @@ class CcPopUp {
 	 *
 	 * @return   array - Pop-Ups ids
 	 */
-	public function get_pop_ups() {
+	private function get_pop_ups() {
 		$list = array();
 		
 		$args = array(
@@ -286,14 +286,47 @@ class CcPopUp {
 	 */
 	function template_scripts() { 
 		
-		if(file_exists(CC_PU_PLUGIN_DIR . 'public/assets/css/public-css.php')) {
-			wp_enqueue_style($this->plugin_slug .'_dynamic', CC_PU_PLUGIN_URL . 'public/assets/css/public-css.php', null, CcPopUp::VERSION, 'all');  
-		} 
+		$pop_ups = $this->pop_ups;
 		
-		if(file_exists(CC_PU_PLUGIN_DIR . 'public/assets/js/public-js.php')) {
-			wp_enqueue_script($this->plugin_slug .'-dynamic-js', CC_PU_PLUGIN_URL . 'public/assets/js/public-js.php', null, CcPopUp::VERSION, 'all');  
-			wp_localize_script( $this->plugin_slug .'-dynamic-js', 'chch_pu_ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' )) );
-		} 	
+		if(!empty($pop_ups)) {
+			
+			if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/css/defaults.css')) {
+				wp_enqueue_style($this->plugin_slug .'_template_defaults', CC_PU_PLUGIN_URL . 'public/templates/css/defaults.css', null, CcPopUp::VERSION, 'all');  
+			}
+				
+			if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/css/fonts.css')) {
+				wp_enqueue_style($this->plugin_slug .'_template_fonts', CC_PU_PLUGIN_URL . 'public/templates/css/fonts.css', null, CcPopUp::VERSION, 'all');  
+			}
+			
+			if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/m-5/css/base.css')){
+				wp_enqueue_style($this->plugin_slug .'_base_m-5', CC_PU_PLUGIN_URL . 'public/templates/m-5/css/base.css', null, CcPopUp::VERSION, 'all');  
+				  
+			} 
+			
+			 
+			if(file_exists(CC_PU_PLUGIN_DIR . 'public/assets/js/jquery-cookie/jquery.cookie.js')){	
+				wp_enqueue_script( $this->plugin_slug .'jquery-cookie', CC_PU_PLUGIN_URL . 'public/assets/js/jquery-cookie/jquery.cookie.js', array('jquery') );
+				
+			}
+			
+			if(file_exists(CC_PU_PLUGIN_DIR . 'public/assets/js/public.js')){	
+				wp_enqueue_script( $this->plugin_slug .'public-script', CC_PU_PLUGIN_URL . 'public/assets/js/public.js', array('jquery') ); 
+				wp_localize_script( $this->plugin_slug .'public-script', 'chch_pu_ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ), 'chch_pop_up_url' => CC_PU_PLUGIN_URL) );
+			}
+			 
+		
+			foreach($pop_ups as $id)
+			{
+				
+				$template_id = get_post_meta( $id, '_chch_pop_up_template', true);
+				$template_base = get_post_meta( $id, '_chch_pop_up_base', true);
+				
+				if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css')){
+					wp_enqueue_style($this->plugin_slug .'_style_'.$template_id, CC_PU_PLUGIN_URL . 'public/templates/'.$template_base.'/'.$template_id.'/css/style.css', null, CcPopUp::VERSION, 'all');  
+					  
+				}   
+			}
+		}	
 			
 	} 
 	
@@ -360,10 +393,12 @@ class CcPopUp {
 				$template_base = get_post_meta( $id, '_chch_pop_up_base', true);
 				
 				
-				echo '<div style="display:none;" id="modal-'.$id.'" class="chch-time-free '.$template_id.'">'; 
+				echo '<div style="display:none;" id="modal-'.$id.'" class="'.$template_id.'">'; 
 				  
-				$template = new CcPopUpTemplate($template_id,$template_base,$id); 
-				$template->get_template(); 
+				$template = new CcPopUpTemplate($template_id,$template_base,$id);
+				$template->build_css();
+				$template->get_template();
+				$template->build_js();
 				
 				echo '</div>';   
 			}
