@@ -4,8 +4,8 @@
 Contributors: chopchoporg
 Tags: popup, popups, pop-up, pop-ups, pop up, pop ups, modal, modal window, wordpress popup, responsive popup, conversion, mailing
 Requires at least: 3.5.1
-Tested up to: 4.1
-Stable tag: 1.2.1
+Tested up to: 4.2
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -171,7 +171,16 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 
 == Changelog ==
- 
+
+= 1.2.2 = 
+Fix cookies
+
+= 1.2.1 = 
+Template fix
+
+= 1.2.0 = 
+Template fix
+
 = 1.1.6 = 
 Template fix
 

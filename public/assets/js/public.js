@@ -54,10 +54,10 @@ jQuery(document).ready(function($) {
 		controlExpires = $(this).attr('data-expires-control');  
 		
 		if(controlViews === 'yes' && controlExpires != 'refresh'){ 
-			if(!$.cookie('shown_modal_'+chchPopUpID)){  
+			if(!Cookies.get('shown_modal_'+chchPopUpID)){  
 				switch(controlExpires){
 					case 'session':
-						$.cookie('shown_modal_'+chchPopUpID, 'true',{ path: '/' });	
+						Cookies.set('shown_modal_'+chchPopUpID, 'true',{ path: '/' });	
 					break; 			
 				}
 			}

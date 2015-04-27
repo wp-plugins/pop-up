@@ -131,7 +131,7 @@ class CcPopUpTemplate {
 		$script .= 'jQuery(function($) {';
 		
 		if(get_post_meta($id, '_chch_pop_up_show_once_per',true)) {
-			$script .= 'if(!$.cookie("shown_modal_'.$id.'")){ ';
+			$script .= 'if(!Cookies.get("shown_modal_'.$id.'")){ ';
 		}
 		
 		$script .= $mobile_header;
