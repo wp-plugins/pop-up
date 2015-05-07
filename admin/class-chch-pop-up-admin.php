@@ -743,7 +743,7 @@ class CcPopUpAdmin {
 	 	$screen = get_current_screen();
 		if ( 'post' == $screen->base && 'chch-pop-up' === $screen->post_type) { 
 			
-			$js ="<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Lora:400,700|Open+Sans:400,300,700|Oswald:700,300|Roboto:400,700,300|Signika:400,700,300' rel='stylesheet' type='text/css'>";
+			$js ="<link href='//fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Lora:400,700|Open+Sans:400,300,700|Oswald:700,300|Roboto:400,700,300|Signika:400,700,300' rel='stylesheet' type='text/css'>";
 			echo $js;
 		}
 	 } 
@@ -767,7 +767,7 @@ class CcPopUpAdmin {
 			wp_enqueue_script( $this->plugin_slug .'-admin-scripts', plugins_url( 'assets/js/chch-admin.js', __FILE__ ), array( 'jquery', 'wp-color-picker' ), CcPopUp::VERSION );  
 			wp_localize_script( $this->plugin_slug .'-admin-scripts', 'chch_pu_ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ), 'chch_pop_up_url' => CC_PU_PLUGIN_URL) );
 			
-			wp_enqueue_style( $this->plugin_slug .'-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css', null, CcPopUp::VERSION,'all' );
+			wp_enqueue_style( $this->plugin_slug .'-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css', null, CcPopUp::VERSION,'all' );
 			
 			if(file_exists(CC_PU_PLUGIN_DIR . 'public/templates/css/defaults.css'))
 			{
