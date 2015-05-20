@@ -5,7 +5,7 @@ Contributors: chopchoporg
 Tags: popup, popups, pop-up, pop-ups, pop up, pop ups, modal, modal window, wordpress popup, responsive popup, conversion, mailing
 Requires at least: 3.5.1
 Tested up to: 4.2
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -172,77 +172,79 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 == Changelog ==
 
+= 1.2.5 = 
+FIX: Customize button
+
 = 1.2.4 = 
-CSS fixes
+FIX: Templates css
 
 = 1.2.3 = 
-Google fonts fix
+FIX: Google fonts
 
 = 1.2.2 = 
-Fix cookies
+ADD: Jquery Cookies new version
 
 = 1.2.1 = 
-Template fix
+FIX: Templates css
 
 = 1.2.0 = 
-Template fix
+FIX: Templates css
 
 = 1.1.6 = 
-Template fix
+FIX: Templates css
 
 = 1.1.5 =
-Add close timeout option
-Template fix
+ADD: Close timeout option
+FIX: Templates css
 
 = 1.1.4 =
-css fix
-editor fix
+FIX: Templates css
+FIX: Wysiwyg editor
 
 = 1.1.3 =
-Add label
+ADD: Field label
 
 = 1.1.2 =
-"Thank you" message edit option
+ADD: "Thank you" message edit option
 
 = 1.1.1 =
-intro/outro fade
-new thumbnails 
-newsletter section fix 
+ADD: intro/outro fade
+ADD: New thumbnails 
+FIX: Newsletter section
 
 = 1.1.0 =
-Ajax fix
-Speed optimization
+FIX: Admin ajax
+ADD: Speed optimization
 
 = 1.0.9 =
-template fixes
+FIX: Templates css
 
 = 1.0.8 =
-new cookie option
-template fixes
-admin panel enhancements
+ADD: Cookie option
+FIX: Templates css
+ADD: Admin panel enhancements
 
 = 1.0.7 =
-template fixes
+FIX: Templates css
 
 = 1.0.6 =
-wysiwyg editor fixes
+FIX: Wysiwyg editor
 
-= 1.0.5 =
-label fix
-new label
-button style fixes
+= 1.0.5 = 
+ADD: Field label
+FIX: Button css
 
 = 1.0.4 =
-headers fixes
-mobile template fixes
+FIX: headers
+FIX: mobile templates
 
 = 1.0.3 =
-templates css fixes 
+FIX: Templates css
 
 = 1.0.2 =
-template fixes
-"Show once per session" option
-Auto close the pop-up after the sign-up
+FIX: Templates css
+ADD: "Show once per session" option
+ADD: Auto close the pop-up after the sign-up
 
 = 1.0.1 =
 Fix: newsletter signup form
