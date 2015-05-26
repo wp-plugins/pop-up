@@ -469,9 +469,18 @@ class CcPopUpAdmin {
 				if(in_array( 'chch_home',$escaped_value)) {
 					$selected = 'selected';	
 				}
+				if(in_array( 'chch_woocommerce_shop',$escaped_value)) {
+					$selected = 'selected';	
+				}
+				
+				if(in_array( 'chch_woocommerce_category',$escaped_value)) {
+					$selected = 'selected';	
+				}
 			}
 			?>
 			<option value="chch_home" <?php echo $selected ?>>Home (Latest Posts)</option>
+    	<option value="chch_woocommerce_shop" <?php echo $selected ?>>Woocommerce (Shop Page)</option>
+    	<option value="chch_woocommerce_category" <?php echo $selected ?>>Woocommerce (Category Page)</option>
 		<?php
 			foreach($all_pages as $value => $title):
 				$selected = '';
@@ -711,7 +720,10 @@ class CcPopUpAdmin {
 		   '_builtin' => true
 		);
 		
-		$post_types = get_post_types( $args );
+		$post_types = get_post_types('','names');
+		if(($key = array_search('chch-pop-up', $post_types)) !== false) {
+			unset($post_types[$key]);
+		}
 		
         $args = array(
 			'post_type' => $post_types,

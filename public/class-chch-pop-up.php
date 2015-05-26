@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.2.5';
+	const VERSION = '1.3.0';
 
 	/** 
 	 *
@@ -382,6 +382,22 @@ class CcPopUp {
 							}
 						} 	
 					} 
+					
+					if(in_array('chch_woocommerce_shop', $pages)) {
+						if(function_exists('is_shop')){  
+							if(is_shop()){ 
+								continue;		
+							}
+						}  	
+					} 
+					
+					if(in_array('chch_woocommerce_category', $pages)) {
+						if(function_exists('is_product_category')){ 
+							if(is_product_category()){ 
+								continue;		
+							}
+						}  	
+					}
 					
 					if(in_array(get_the_ID(), $pages)){
 						continue;		
