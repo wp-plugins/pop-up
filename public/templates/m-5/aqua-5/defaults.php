@@ -2,9 +2,7 @@
 return array (
 	'size' => 
  	array (
-		'custom'	=> '0',
-    	'width' 	=> '784',
-		'height' 	=> 'auto',
+		'size'    => 'chch-time-small'
   	),
 	'background' => 
  	array (
@@ -29,6 +27,7 @@ return array (
 		'content' 	=> '<p> Put in some details about your campaign and list the reasons to sign up. <br>Don’t forget the final <a href="#">call to action.</a> </p>',
 		'privacy_message' 	=> 'We respect your privacy and we won\'t share your information',
 		'privacy_link' 	=> '#link',
+		'privacy_link_label' 	=> 'Privacy policy', 
 		'thank_you' => 'Thank you!',
 	),
 );

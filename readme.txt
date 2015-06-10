@@ -1,11 +1,11 @@
-﻿=== Pop-Up CC ===
+=== Pop-Up CC ===
 
 
 Contributors: chopchoporg
 Tags: popup, popups, pop-up, pop-ups, pop up, pop ups, modal, modal window, wordpress popup, responsive popup, conversion, mailing
 Requires at least: 3.5.1
 Tested up to: 4.2
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Pop-up plugin with professional templates.
 == Description ==
 
 
-Pop-Up CC plugin brings unlimited pop-ups with easily customizable professional templates. The pop-ups are responsive and work with any WordPress theme.
+Pop-Up CC plugin brings unlimited pop-ups with easily customizable professional templates. Each template comes in **two sizes**. The pop-ups are responsive and work with any WordPress theme.
 
 
 Live preview: [Default Pop-Up template](https://shop.chop-chop.org/demo/pop-up-cc/)
@@ -32,8 +32,9 @@ Pop-Up CC is a perfect solution to capture the audience’s attention in the rig
 
 
 * Unlimited pop-up number
-* Beautiful designs   
+* Beautiful designs
 * 6 elegant and professional pop-up templates
+* Two sizes of the pop-ups (big and small)
 * Responsive pop-up themes
 * Retina-friendly
 * Quick and easy pop-up setup
@@ -81,10 +82,10 @@ The pop-up will appear when a user scrolls to a given class or id, scrolls down 
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (size, fonts, buttons, colours, content, background)
 * All Google Web Fonts
-* Pop-up performance stats 
-* MailChimp integration 
-* GetResponse integration 
-* Campaign Monitor integration 
+* Pop-up performance stats
+* MailChimp integration
+* GetResponse integration
+* Campaign Monitor integration
 
 [Get Pop-Up CC Pro Scroll](https://shop.chop-chop.org/on-scroll-pop-up/?utm_source=wordpressorg&utm_medium=on-scroll-pop-up&utm_campaign=wordpressorg)
 
@@ -99,7 +100,7 @@ The pop-up will appear when a user clicks a given class or id. Perfect for displ
 * 6 professional pop-up designs
 * Elaborate custom visual editor with live pop-up preview
 * Highly customizable pop-ups (fonts, button, colours, content, background)
-* All Google Web Fonts 
+* All Google Web Fonts
 * Embed codes and plain text support
 
 [Get Pop-Up CC Pro Click](https://shop.chop-chop.org/on-click-pop-up-cc-pro/?utm_source=wordpressorg&utm_medium=on-click-pop-up&utm_campaign=wordpressorg)
@@ -172,28 +173,28 @@ Contact shop@chop-chop.org if you have any questions or wish to provide feedback
 
 == Changelog ==
 
-= 1.3.0 = 
+= 1.3.0 =
 ADD: woocommerce pages to "disable on" list
 
-= 1.2.5 = 
+= 1.2.5 =
 FIX: Customize button
 
-= 1.2.4 = 
+= 1.2.4 =
 FIX: Templates css
 
-= 1.2.3 = 
+= 1.2.3 =
 FIX: Google fonts
 
-= 1.2.2 = 
+= 1.2.2 =
 ADD: Jquery Cookies new version
 
-= 1.2.1 = 
+= 1.2.1 =
 FIX: Templates css
 
-= 1.2.0 = 
+= 1.2.0 =
 FIX: Templates css
 
-= 1.1.6 = 
+= 1.1.6 =
 FIX: Templates css
 
 = 1.1.5 =
@@ -212,7 +213,7 @@ ADD: "Thank you" message edit option
 
 = 1.1.1 =
 ADD: intro/outro fade
-ADD: New thumbnails 
+ADD: New thumbnails
 FIX: Newsletter section
 
 = 1.1.0 =
@@ -233,7 +234,7 @@ FIX: Templates css
 = 1.0.6 =
 FIX: Wysiwyg editor
 
-= 1.0.5 = 
+= 1.0.5 =
 ADD: Field label
 FIX: Button css
 

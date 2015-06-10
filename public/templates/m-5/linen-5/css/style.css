@@ -7,25 +7,28 @@
 
 /*** General ***/
 
-.linen-5.pop-up-cc {
-  color: #090909;
-}
 .linen-5 .modal-inner {
   background: #efede7;
+  color: #090909;
   font-family: 'Lora', serif;
 }
-
-
 
 /*** Close Button ***/
 
 .linen-5 .cc-pu-close {
+	right: 0;
   top: 0;
-  right: 0;
+  background-color: transparent;
+}
+.linen-5.chch-free-big .cc-pu-close {
   width: 45px;
   height: 45px;
-  z-index: 50;
-  background-color: transparent;
+  padding: 12px 0 0 0 !important;
+}
+.linen-5.chch-free-small .cc-pu-close {
+  width: 30px;
+  height: 30px;
+  padding: 5px 8px !important;
 }
 .linen-5 .cc-pu-close i {
   color: #514b31;
@@ -36,31 +39,47 @@
 /*** Primary ***/
 
 .linen-5 .modal-inner h2 {
+  text-transform: none !important;
+  color: #090909 !important;
   font-weight: 700 !important;
+  font-family: 'Lora', serif !important;
+}
+.linen-5.chch-free-big .modal-inner h2 {
   font-size: 2.85714em !important;
-  line-height: 1.1 !important;
+  line-height: 1.1em !important;
   margin-top: 6px !important;
   margin-bottom: 35px !important;
-  color: #090909 !important;
-  text-transform: none !important;
-  font-family: 'Lora', serif !important;
+}
+.linen-5.chch-free-small .modal-inner h2 {
+	font-size: 2.1em !important;
+  line-height: 1.2em !important;
+  margin: 0.85714em 0 1em 0 !important;
 }
 
 /*** Secondary ***/
 
 .linen-5 .modal-inner h3 {
-	text-transform: none !important;
+  text-transform: none !important;
+  color: #514b31 !important;
+  font-weight: 300 !important;
+  font-family: 'Lora', serif !important;
+}
+.linen-5.chch-free-big .modal-inner h3 {
   font-size: 1.42857em !important;
   line-height: 1.5em !important;
-  font-weight: 400 !important;
-  color: #514b31 !important;
-  font-family: 'Lora', serif !important;
+}
+.linen-5.chch-free-small .modal-inner h3 {
+	font-size: 1.4em !important;
+  line-height: 1.3em !important;
 }
 
 /*** Content ***/
 
 .linen-5 .modal-inner p {
-
+  color: #090909 !important;
+  font-family: 'Lora', serif !important;
+  margin: 1.78571em 0 13px !important;
+  padding: 0!important;
 }
 
 /*** Privacy ***/
@@ -68,6 +87,9 @@
 .linen-5 .cc-pu-privacy-info a {
   color: #696969 !important;
   border-bottom: 1px solid #bfbbaf !important;
+}
+.linen-5 .cc-pu-privacy-section p {
+	margin: 0!important;
 }
 
 /*** Form ***/
@@ -81,7 +103,7 @@
   background: #514b31 !important;
   color: #fff !important;
   font-size: 16px !important;
-  font-weight: 700 !important; 
+  font-weight: 700 !important;
   font-family: 'Lora', serif !important;
 }
 
@@ -89,19 +111,19 @@
     background-color: #514b31;
 }
 
-.pop-up-cc .cc-pu-thank-you p{ 
+.pop-up-cc .cc-pu-thank-you p{
 	color:#000 !important;
 }
 
-.pop-up-cc .cc-pu-thank-you:after {  
-     border-top: 8px solid #514b31; 
+.pop-up-cc .cc-pu-thank-you:after {
+     border-top: 8px solid #514b31;
 }
 
 @media only screen and (min-width: 768px) {
-	  
 
-   .pop-up-cc  .cc-pu-thank-you:after {  
-      border-bottom: 8px solid #514b31;   	
-	  border-top: none;	 
+
+   .pop-up-cc  .cc-pu-thank-you:after {
+      border-bottom: 8px solid #514b31;
+	  border-top: none;
     }
 }

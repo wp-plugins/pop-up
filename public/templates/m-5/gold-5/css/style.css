@@ -7,27 +7,31 @@
 
 /*** General ***/
 
-.gold-5.pop-up-cc {
-  color: #989898;  
-}
 .gold-5 .modal-inner {
   background: #fff;
-  font-family: 'Open Sans', serif; 
+  color: #989898;
+  font-family: 'Open Sans', serif;
 }
 
 /*** Close Button ***/
 
 .gold-5 .cc-pu-close {
-  top: 7px;
   right: 7px;
-  display: block;
+  top: 7px;
+  background-color: #ffe96d;
+}
+.gold-5.chch-free-big .cc-pu-close {
   width: 45px;
   height: 45px;
-  z-index: 50;
-  background: #ffe96d !important;
+  padding: 8px 10px !important;
+}
+.gold-5.chch-free-small .cc-pu-close {
+  width: 30px;
+  height: 30px;
+  padding: 5px 8px !important;
 }
 .gold-5 .cc-pu-close i {
-  color: #000 !important;
+  color: #000;
 }
 
 /*** Headers ***/
@@ -35,29 +39,52 @@
 /*** Primary ***/
 
 .gold-5 .modal-inner h2 {
-  font-weight: 400 !important;
-  font-size: 45px !important;
-  line-height: 1.1 !important;
-  margin-top: 0 !important;
-  margin-bottom: 35px !important;
-  font-family: 'Playfair Display', serif !important;
-  color: #000 !important;
   text-transform: none !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.gold-5.chch-free-big .modal-inner h2 {
+  font-size: 3.21429em !important;
+  line-height: 1.1em !important;
+  margin-top: 0.21429em !important;
+  margin-bottom: 0.64286em !important;
+}
+.gold-5.chch-free-small .modal-inner h2 {
+	font-size: 2.1em !important;
+  line-height: 1.1em !important;
+  margin: 0.85714em 0 1em 0 !important;
+}
+.gold-5 .modal-inner h2 strong {
+  font-weight: 700 !important;
+  color: #ffe96d !important;
 }
 
 /*** Secondary ***/
 
 .gold-5 .modal-inner h3 {
+  text-transform: none !important;
+  color: #514b31 !important;
+  font-weight: 300 !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.gold-5.chch-free-big .modal-inner h3 {
   font-size: 1.42857em !important;
   line-height: 1.5em !important;
-  font-weight: 400 !important;
-  font-family: 'Playfair Display', serif !important;
-  color: #514b31 !important;
-  text-transform: none !important;
+}
+.gold-5.chch-free-small .modal-inner h3 {
+	font-size: 1.4em !important;
+  line-height: 1.3 !important;
 }
 
 /*** Content ***/
- 
+
+.gold-5 .modal-inner p {
+  color: #989898 !important;
+  font-family: 'Open Sans', serif !important;
+  margin: 1.78571em 0 13px !important;
+  padding: 0!important;
+}
 
 /*** Privacy ***/
 
@@ -65,6 +92,9 @@
   color: #696969 !important;
   border-bottom: 1px solid #ffe96d !important;
   font-weight: normal !important;
+}
+.gold-5 .cc-pu-privacy-section p {
+	margin: 0!important;
 }
 
 /*** Form ***/
@@ -87,20 +117,20 @@
     background-color: #FFE96D;
 }
 
-.pop-up-cc .cc-pu-thank-you:after {  
-     border-top: 8px solid #FFE96D; 
+.pop-up-cc .cc-pu-thank-you:after {
+     border-top: 8px solid #FFE96D;
 }
-@media (max-width: 992px) { 
-	.gold-5 .modal-inner { 
+@media (max-width: 992px) {
+	.gold-5 .modal-inner {
 	  padding: 50px 20px 30px;
 	}
 }
 @media only screen and (min-width: 768px) {
-	  
 
-   .pop-up-cc  .cc-pu-thank-you:after {  
-      border-bottom: 8px solid #FFE96D; 
-	  border-top: none;	   	
+
+   .pop-up-cc  .cc-pu-thank-you:after {
+      border-bottom: 8px solid #FFE96D;
+	  border-top: none;
     }
 }
 

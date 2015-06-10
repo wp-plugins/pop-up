@@ -4,29 +4,34 @@
   color: #fff !important;
   font-weight: bold;
 }
+
 /*** General ***/
 
-.red-5.pop-up-cc {
-  color: #fff;  
-}
 .red-5 .modal-inner {
   background: #ea3434;
+  color: #fff;
   font-family: 'Signika', sans-serif;
 }
-
 
 /*** Close Button ***/
 
 .red-5 .cc-pu-close {
-  right: 0;
+	right: 0;
   top: 0;
+  background-color: #fff;
+}
+.red-5.chch-free-big .cc-pu-close {
   width: 45px;
   height: 45px;
-  z-index: 50;
-  background: #fff !important;
+  padding: 12px 0 0 0 !important;
+}
+.red-5.chch-free-small .cc-pu-close {
+  width: 30px;
+  height: 30px;
+  padding: 5px 8px !important;
 }
 .red-5 .cc-pu-close i {
-  color: #090909 !important;
+  color: #ea3434;
 }
 
 /*** Headers ***/
@@ -34,25 +39,37 @@
 /*** Primary ***/
 
 .red-5 .modal-inner h2 {
+  text-transform: none !important;
   color: #fff !important;
   font-weight: 700 !important;
+	font-family: 'Signika', sans-serif !important;
+}
+.red-5.chch-free-big .modal-inner h2 {
   font-size: 2.5em !important;
-  line-height: 1.1 !important;
-  margin-top: 0.85714em !important;
-  margin-bottom: 0.92857em !important;
-  font-family: 'Signika', sans-serif !important;
-  text-transform: none !important;
+  line-height: 1.2em !important;
+  margin: 12px 0 0.92857em !important;
+}
+.red-5.chch-free-small .modal-inner h2 {
+	font-size: 2.1em !important;
+  line-height: 1.2em !important;
+  margin: 0.85714em 0 1em 0 !important;
 }
 
 /*** Secondary ***/
 
 .red-5 .modal-inner h3 {
+  text-transform: none !important;
   color: #fff !important;
-  font-size: 1.42857em !important;
-  line-height: 1.5em !important;
   font-weight: 300 !important;
   font-family: 'Signika', sans-serif !important;
-  text-transform: none !important;
+}
+.red-5.chch-free-big .modal-inner h3 {
+  font-size: 1.42857em !important;
+  line-height: 1.5em !important;
+}
+.red-5.chch-free-small .modal-inner h3 {
+	font-size: 1.4em !important;
+  line-height: 1.3em !important;
 }
 
 /*** Content ***/
@@ -61,6 +78,8 @@
   color: #fff !important;
   font-weight: 300 !important;
   font-family: 'Signika', sans-serif !important;
+  margin: 1.78571em 0 13px !important;
+  padding: 0!important;
 }
 
 /*** Privacy ***/
@@ -68,6 +87,9 @@
 .red-5 .cc-pu-privacy-info a {
   color: #fff;
   border-bottom: 1px solid #fff;
+}
+.red-5 .cc-pu-privacy-section p {
+	margin: 0!important;
 }
 
 /*** Form ***/
@@ -82,7 +104,7 @@
   color: #fff !important;
   font-weight: 700 !important;
   font-family: "Signika", sans-serif !important;
-  text-transform: uppercase !important; 
+  text-transform: uppercase !important;
 }
 
 .pop-up-cc .cc-pu-thank-you {
@@ -90,20 +112,20 @@
 	color:#fff;
 }
 
-.pop-up-cc .cc-pu-thank-you p{ 
+.pop-up-cc .cc-pu-thank-you p{
 	color:#000 !important;
 }
 
-.pop-up-cc .cc-pu-thank-you:after {  
-     border-top: 8px solid #fff; 
+.pop-up-cc .cc-pu-thank-you:after {
+     border-top: 8px solid #fff;
 }
 
 @media only screen and (min-width: 768px) {
-	  
 
-   .pop-up-cc  .cc-pu-thank-you:after {  
-      border-bottom: 8px solid #fff;   
-	  border-top: none;	
+
+   .pop-up-cc  .cc-pu-thank-you:after {
+      border-bottom: 8px solid #fff;
+	  border-top: none;
     }
 }
 

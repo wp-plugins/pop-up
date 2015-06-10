@@ -75,7 +75,7 @@ jQuery(document).ready( function ($) {
 				
 			 	theme = thisEl.closest('.theme');
 				previewWrapper = $('#cc-pu-customize-form-'+template); 
-                $('#cc-pu-customize-preview-'+template).html(data);
+      	$('#cc-pu-customize-preview-'+template).html(data);
 				
 				$('.theme').removeClass('active');
 				theme.addClass('active');  
@@ -83,6 +83,8 @@ jQuery(document).ready( function ($) {
 				$('#_chch_pop_up_template').val(template); 
 				$('#_chch_pop_up_template_base').val(base);
 				
+				previewWrapper.find('.select-class-switcher').trigger('change');
+				previewWrapper.find('.cc-pu-customize-content').trigger('change');
 				previewWrapper.find('.cc-pu-option-active .cc-pu-customize-style').trigger('change');   
 	
 				previewWrapper.show();  
@@ -163,19 +165,25 @@ jQuery(document).ready( function ($) {
 	  		  
 	});
 	
-	$('.cc-pu-customize-content').on('keyup', function(e){
+	$('.cc-pu-customize-content').on('keyup change', function(e){
 		var el = $(this); 
 		var template = el.attr('data-template');
 		var target = el.attr('data-customize-target');
 		var elAttr = el.attr('data-attr');
 		var elValue = el.val();  
 		
-		if(typeof elAttr === "undefined"){
-			$('#cc-pu-customize-preview-'+template+' '+target).text(elValue); 
-		}
-		else {   
-			$('#cc-pu-customize-preview-'+template+' '+target).attr(elAttr,elValue); 
-		}
+		if (el.hasClass('remover')) {
+      if (elValue == '') {
+        $('#cc-pu-customize-preview-' + template + ' ' + target).hide();
+      } else {
+        $('#cc-pu-customize-preview-' + template + ' ' + target).show();
+      }
+    } else if (typeof elAttr === "undefined") {
+      $('#cc-pu-customize-preview-' + template + ' ' + target).text(elValue);
+    } else {
+      $('#cc-pu-customize-preview-' + template + ' ' + target).attr(elAttr, elValue);
+    }
+		 
 	});
 	 
 	
@@ -218,6 +226,20 @@ jQuery(document).ready( function ($) {
 		
 	}); 
 	
+	$(".select-class-switcher").on('change', function() {
+    el = $(this);
+    template = el.attr('data-template');
+    eltarget = el.attr('data-customize-target');
+
+    elOldVal = el.attr('data-old');
+    elval = el.find(":selected").val();
+
+    $('#cc-pu-customize-preview-' + template + ' ' + eltarget).removeClass(elOldVal);
+    $('#cc-pu-customize-preview-' + template + ' ' + eltarget).addClass(elval);
+
+    el.attr('data-old', elval);
+  });
+	
 	///// WP MEDIA UPLOAD JS
 	var custom_uploader;
  
@@ -245,7 +267,7 @@ jQuery(document).ready( function ($) {
         //When a file is selected, grab the URL and set it as the text field's value
         custom_uploader.on('select', function() {
             attachment = custom_uploader.state().get('selection').first().toJSON();
-			console.log(attachment);
+			 
             $('#'+target).val(attachment.url);
 			$('#'+target).trigger('change');
         });

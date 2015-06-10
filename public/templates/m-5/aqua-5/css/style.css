@@ -6,14 +6,11 @@
 
 /*** General ***/
 
-.aqua-5.pop-up-cc {
-  color: #989898; 
-}
 .aqua-5 .modal-inner {
   background: #fff;
+  color: #989898;
   font-family: 'Roboto', sans-serif;
 }
-
 
 /*** Close Button ***/
 
@@ -22,7 +19,16 @@
   top: 7px;
   border-radius: 3px;
   background-color: transparent;
-  padding:0 !important;
+}
+.aqua-5.chch-free-big .cc-pu-close {
+  width: 45px;
+  height: 45px;
+  padding: 8px 10px !important;
+}
+.aqua-5.chch-free-small .cc-pu-close {
+  width: 30px;
+  height: 30px;
+  padding: 5px 8px !important;
 }
 .aqua-5 .cc-pu-close i {
   color: #59d5ef;
@@ -36,48 +42,62 @@
   color: inherit;
   float: none;
 }
-
-.aqua-5 .modal-inner h2  {
+.aqua-5 .modal-inner h2 {
+  text-transform: none !important;
+  color: #090909 !important;
+  font-weight: 300 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.aqua-5.chch-free-big .modal-inner h2 {
+  font-size: 3.21429em !important;
+  line-height: 1.1em !important;
   margin-top: 0.21429em !important;
   margin-bottom: 0.64286em !important;
-  line-height: 1.1 !important;
-  font-size: 3.21429em !important;
-  font-weight: 300 !important; 
-  color: #090909 !important;
-  font-family: 'Roboto', sans-serif !important;
-  text-transform: none !important;
+}
+.aqua-5.chch-free-small .modal-inner h2 {
+	font-size: 2.1em !important;
+  line-height: 1.1em !important;
+  margin: 0.85714em 0 1em 0 !important;
 }
 .aqua-5 .modal-inner h2 strong {
   font-weight: 700 !important;
-   color: #59d5f0 !important;
- 
+  color: #59d5f0 !important;
 }
+
 /*** Secondary ***/
 
 .aqua-5 .modal-inner h3 {
+  text-transform: none !important;
+  color: #090909 !important;
+  font-weight: 300 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.aqua-5.chch-free-big .modal-inner h3 {
   font-size: 1.42857em !important;
   line-height: 1.5em !important;
-  font-weight: 700 !important;
-  color: inherit !important;
-  color: #090909 !important;
-  font-family: 'Roboto', sans-serif !important;
-  text-transform: none !important;
+}
+.aqua-5.chch-free-small .modal-inner h3 {
+	font-size: 1.4em !important;
+  line-height: 1.3em !important;
 }
 
 /*** Content ***/
 
-.aqua-5 .modal-inner p { 
-	color: inherit;
-	font-family: 'Roboto', sans-serif !important;
-	color: #989898 !important;
-	padding:0 !important;
+.aqua-5 .modal-inner p {
+  color: #989898 !important;
+  font-family: 'Roboto', sans-serif !important;
+  margin: 1.78571em 0 13px !important;
+  padding: 0!important;
 }
 
 /*** Privacy ***/
 
-.aqua-5 .cc-pu-privacy-info a {  
-	color: #514b31 !important;
-	border-bottom: 1px solid #59d5f0;
+.aqua-5 .cc-pu-privacy-info a {
+  color: inherit;
+  border-bottom: 1px solid #59d5f0;
+}
+.aqua-5 .cc-pu-privacy-section p {
+	margin: 0!important;
 }
 
 /*** Form ***/
@@ -93,7 +113,7 @@
   border-radius: 5px !important;
   background: #59d5ef !important;
   color: #fff !important;
-  padding: 0 35px !important; 
+  padding: 0 35px !important;
   font-weight: 700 !important;
 }
 
@@ -105,16 +125,16 @@
     color:#fff !important;
 }
 
-.pop-up-cc .cc-pu-thank-you:after {  
-     border-top: 8px solid #59d5ef; 
+.pop-up-cc .cc-pu-thank-you:after {
+     border-top: 8px solid #59d5ef;
 }
 
 @media only screen and (min-width: 768px) {
-	  
 
-   .pop-up-cc  .cc-pu-thank-you:after {  
+
+   .pop-up-cc  .cc-pu-thank-you:after {
       border-bottom: 8px solid #59d5ef;
-	  border-top: none;	   	
+	  border-top: none;
     }
 }
 

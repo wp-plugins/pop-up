@@ -6,25 +6,31 @@
 }
 /*** General ***/
 
-.white-5.pop-up-cc {
-  color: #090909;  
-}
 .white-5 .modal-inner {
   background: #fff;
+  color: #000;
   font-family: 'Open Sans', sans-serif;
 }
 
 /*** Close Button ***/
 
 .white-5 .cc-pu-close {
-  right: 0;
+	right: 0;
   top: 0;
+  background-color: #fff;
+}
+.white-5.chch-free-big .cc-pu-close {
   width: 45px;
   height: 45px;
-  background: #fff !important;
+  padding: 12px 0 0 0 !important;
+}
+.white-5.chch-free-small .cc-pu-close {
+  width: 30px;
+  height: 30px;
+  padding: 5px 8px !important;
 }
 .white-5 .cc-pu-close i {
-  color: #090909;
+  color: #000;
 }
 
 /*** Headers ***/
@@ -35,10 +41,17 @@
   text-transform: uppercase !important;
   color: #000 !important;
   font-weight: 700 !important;
-  font-size: 2.5em !important;
-  line-height: 1.1 !important;
-  margin: 12px 0 0.92857em !important;
   font-family: 'Oswald', sans-serif !important;
+}
+.white-5.chch-free-big .modal-inner h2 {
+  font-size: 2.5em !important;
+  line-height: 1.2em !important;
+  margin: 12px 0 0.92857em !important;
+}
+.white-5.chch-free-small .modal-inner h2 {
+	font-size: 2.1em !important;
+  line-height: 1.2em !important;
+  margin: 0.85714em 0 1em 0 !important;
 }
 
 /*** Secondary ***/
@@ -46,10 +59,16 @@
 .white-5 .modal-inner h3 {
   text-transform: uppercase !important;
   color: #000 !important;
+  font-weight: 300 !important;
+  font-family: 'Oswald', sans-serif !important;
+}
+.white-5.chch-free-big .modal-inner h3 {
   font-size: 1.42857em !important;
   line-height: 1.5em !important;
-  font-weight: 400 !important;
-  font-family: 'Oswald', sans-serif !important; 
+}
+.white-5.chch-free-small .modal-inner h3 {
+	font-size: 1.4em !important;
+  line-height: 1.3em !important;
 }
 
 /*** Content ***/
@@ -57,13 +76,18 @@
 .white-5 .modal-inner p {
   color: #000 !important;
   font-family: 'Open Sans', sans-serif !important;
+  margin: 1.78571em 0 13px !important;
+  padding: 0!important;
 }
 
 /*** Privacy ***/
 
 .white-5 .cc-pu-privacy-info a {
-  color: #000 !important;
-  border-bottom: 1px solid #989898 !important;
+  color: #000;
+  border-bottom: 1px solid #989898!important;
+}
+.white-5 .cc-pu-privacy-section p {
+	margin: 0!important;
 }
 
 /*** Form ***/
@@ -76,7 +100,7 @@
 .white-5 .cc-pu-smart-form .cc-pu-btn, .white-5 .cc-pu-smart-form .cc-pu-btn:hover {
   background: #000 !important;
   color: #fff !important;
-  padding: 0 35px !important; 
+  padding: 0 35px !important;
   font-weight: 700 !important;
   font-family: 'Oswald', sans-serif !important;
   text-transform: uppercase !important;
@@ -85,19 +109,19 @@
 .pop-up-cc .cc-pu-thank-you {
     background-color: #000;
 }
-.pop-up-cc .cc-pu-thank-you p{ 
+.pop-up-cc .cc-pu-thank-you p{
 	color:#fff !important;
 }
 
-.pop-up-cc .cc-pu-thank-you:after {  
-     border-top: 8px solid #000; 
+.pop-up-cc .cc-pu-thank-you:after {
+     border-top: 8px solid #000;
 }
 
 @media only screen and (min-width: 768px) {
-	  
 
-   .pop-up-cc  .cc-pu-thank-you:after {  
-      border-bottom: 8px solid #000; 
-	  border-top: none;	  	
+
+   .pop-up-cc  .cc-pu-thank-you:after {
+      border-bottom: 8px solid #000;
+	  border-top: none;
     }
 }

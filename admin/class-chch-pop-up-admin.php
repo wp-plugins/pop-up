@@ -656,19 +656,8 @@ class CcPopUpAdmin {
 		if(!empty($template))
 		{
 			$template_data = array();
-			
-			if ( isset( $_REQUEST['_'.$template.'_size_custom'] ) ) { 
-				$template_data['size'] = array(
-					'custom' => 1
-				);   
-			} else {
-				$template_data['size'] = array(
-					'custom' => 0
-				); 
-			}
-			
-			$template_data['size']['width'] = sanitize_text_field($_REQUEST['_'.$template.'_size_width']); 
-			$template_data['size']['height'] = sanitize_text_field($_REQUEST['_'.$template.'_size_height']);
+			 
+			$template_data['size']['size'] = sanitize_text_field($_REQUEST['_'.$template.'_size_size']);  
 			 
 			$template_data['background']= array(
 				'color' => sanitize_text_field($_REQUEST['_'.$template.'_background_color']), 
@@ -700,6 +689,7 @@ class CcPopUpAdmin {
 				'content' => $main_content,  
 				'privacy_message' => wp_kses_post(str_replace($p_array, '', $privacy_message_content)),  
 				'privacy_link' => sanitize_text_field($_REQUEST['_'.$template.'_contents_privacy_link']),
+				'privacy_link_label' => sanitize_text_field($_REQUEST['_'.$template.'_contents_privacy_link_label']),
 				'thank_you' => sanitize_text_field($_REQUEST['_'.$template.'_contents_thank_you']),     
 			); 
 			 

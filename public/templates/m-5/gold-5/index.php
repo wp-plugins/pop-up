@@ -11,7 +11,7 @@
 
 
 <div class="cc-pu-bg m-5 gold-5"></div>
-<article class="pop-up-cc m-5 gold-5">
+<article class="pop-up-cc m-5 gold-5 <?php echo $this-> get_template_option('size','size');?>">
 	<div class="modal-inner">
 		<?php 
 		$views_control = 'refresh'; 
@@ -68,8 +68,8 @@
 		
 		<?php endif;?>
 		<footer class="cc-pu-privacy-info"> 
-			<?php if(!empty($content['privacy_link'])):?>
-			<a href="<?php echo $content['privacy_link'];?>">Privacy policy</a>
+			<?php if(!empty($content['privacy_link']) || is_admin()):?>
+			<a href="<?php echo $content['privacy_link'];?>"><?php echo $content['privacy_link_label'];?></a>
 			<?php endif;?>
 			<div class="cc-pu-privacy-section"> 
 				<p><?php echo $content['privacy_message'];?></p>

@@ -69,15 +69,7 @@ class CcPopUpTemplate {
 		$template = $this->template_base;
 		
 		$prefix = '#modal-'.$this->post_id.' ';
-		$css = '<style>';
-		$size_options = $options['size'];
-		if($size_options['custom'])
-		{
-			$css .= $prefix.'.'.$template.'.pop-up-cc  {
-				width: '.$size_options['width'].'px;
-				height: '.$size_options['height'].'px;
-			}';
-		}
+		$css = '<style>'; 
 		 
 		 
 		$background_options = $options['background'];

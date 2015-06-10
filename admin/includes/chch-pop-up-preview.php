@@ -101,35 +101,17 @@ class CcPopUpPeview {
 				array(
 					'option_group' => 'size',
 					'title'		   => 'Size',
-					'fields' => array(
+					'fields' => array( 
 						array(
-							'type'	 => 'revealer',  
-							'name'   => 'custom', 
-							'desc'   => 'Enable custom pop-up size (If you set a custom pop-up size, the pop-up won’t be responsive.)',
-							'revaeals' => array(
-								'title' => 'Custom Pop-Up Size',
-								'fields' => array(
-									array(
-										'type'	 => 'text',
-										'name'   => 'width',
-										'action' => 'css', 
-										'target' => '.pop-up-cc',
-										'attr'   => 'width',
-										'unit'   =>	'px',
-										'desc'   => 'Width:',
-									),
-									array(
-										'type'	 => 'text',
-										'name'   => 'height',
-										'action' => 'css', 
-										'target' => '.pop-up-cc',
-										'attr'   => 'height',
-										'unit'   =>	'px',
-										'desc'   => 'Height:',
-									),
-								),
-							),
-						), 
+							'type'	 => 'select_class_switcher',
+							'name'   => 'size',
+							'target' => '.pop-up-cc',
+							'desc'   => 'Size:',
+							'options' => array(
+								'chch-free-small' => 'Small',
+								'chch-free-big' => 'Big'
+							)
+     				),
 					),
 				),
 				array(
@@ -189,9 +171,17 @@ class CcPopUpPeview {
 							'type'	 => 'text', 
 							'action' => 'text',
 							'name'   => 'privacy_link',  
+							'class' => 'remover',
 							'target' => '.cc-pu-privacy-info a', 
 							'attr' => 'href',
-							'desc'   => 'Privacy Policy Link (if there is no URL provided, the link will not be displayed):',
+							'desc'   => 'Privacy Policy URL (if there is no URL provided, the link will not be displayed):',
+						), 
+						array(
+							'type'	 => 'text', 
+							'action' => 'text',
+							'name'   => 'privacy_link_label',  
+							'target' => '.cc-pu-privacy-info a',  
+							'desc'   => 'Privacy Policy Label',
 						),  
 						array(
 							'type'	 => 'text', 
@@ -899,6 +889,31 @@ class CcPopUpPeview {
 					 
     }  
 	 
+	 
+	 /**
+	 * Build select radio
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    $option_html - html
+	 */
+	private  function build_field_select_class_switcher($field, $options_group) {
+		$option_html = '';
+
+
+    $radio_option = $this->template_options[$options_group][$field['name']];
+		$option_html = '<label><span class="customize-control-title">'.$field['desc'].'</span>';
+
+		$option_html .= '<select class="select-class-switcher" data-old="'.$radio_option.'" ';
+		$option_html .= $this->build_field_attributes($field, $options_group);
+		$option_html .= '>';
+
+		$option_html .= $this->build_field_values($field, $options_group);
+
+		$option_html .= '</select></label>';
+		return $option_html;
+
+	}
 	
 	/**
 	 * Return field attributes
@@ -989,12 +1004,15 @@ class CcPopUpPeview {
 					 	
 			}
 			
-			if(($type != 'revealer' || $type != 'revealer_group' || $type != 'text') && $atts['target'] !=='none') 
+			if(($type != 'revealer' || $type != 'revealer_group' || $type != 'text' || $type != 'select_class_switcher') && $atts['target'] !=='none') 
 			{
 				$action .= ' cc-pu-customize-style';
 			}
 		}
 		
+		if (isset($atts['class']) && !empty($atts['class'])) {
+      $action .= ' '.$atts['class'];
+    }
 		
 		$attributes .= 'name="'.$name.'" ';	
 		$attributes .= 'id="'.$id.'" ';	
@@ -1010,7 +1028,7 @@ class CcPopUpPeview {
 			$attributes .= 'data-attr="'.$attr.'" '; 	
 		}
 		
-		$exclude_types = array('revealer','revealer_group','select');
+		$exclude_types = array('revealer','revealer_group','select','select_class_switcher');
 		if(!in_array($type, $exclude_types)) 
 		{
 			$attributes .= 'value="'.$value.'" '; 
@@ -1027,14 +1045,12 @@ class CcPopUpPeview {
 	 * @return    $option_html - html
 	 */
 	function build_field_values($atts, $options_group){ 
-		$option = '';
-		if(isset($this->template_options[$options_group][$atts['name']]))
-		{
-			$option = $this->template_options[$options_group][$atts['name']];	
-		}
+		$option = $this->template->get_template_option($options_group,$atts['name']) ? $this->template->get_template_option($options_group,$atts['name']) : '';
+	 
 		
 		switch($atts['type']):
 			case 'select':
+			case 'select_class_switcher':
 				$select_option ='';
 				foreach($atts['options'] as $val => $desc):
 					$selected = '';
