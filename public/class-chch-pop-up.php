@@ -25,7 +25,7 @@ class CcPopUp {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.3.2';
+	const VERSION = '1.3.3';
 
 	/** 
 	 *
@@ -394,6 +394,14 @@ class CcPopUp {
 					if(in_array('chch_woocommerce_category', $pages)) {
 						if(function_exists('is_product_category')){ 
 							if(is_product_category()){ 
+								continue;		
+							}
+						}  	
+					}
+          
+          if(in_array('chch_woocommerce_products', $pages)) {
+						if(function_exists('is_product')){ 
+							if(is_product()){ 
 								continue;		
 							}
 						}  	
