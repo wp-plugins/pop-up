@@ -261,9 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 		display: none;
 	overflow: visible !important;
 }
-.m-5.pop-up-cc .cc-pu-thank-you p {
-	color:  inherit !important;
-	font-family: inherit !important;
+.m-5.pop-up-cc .cc-pu-thank-you p { 
 	margin: 0 !important;
 }
 .m-5.pop-up-cc .cc-pu-error-message {
