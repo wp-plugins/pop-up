@@ -378,6 +378,13 @@ class CcPopUpAdmin {
         ),
       ) );
 
+      $newsletter_metabox->add_field( array(
+					'name' => __( 'Save emails to:', $domain  ),
+					'desc'    => __( '', $domain  ),
+					'id'   => $prefix . 'save_emails',
+					'type' => 'chch_pu_newsletter_select', 
+				));
+
     $newsletter_metabox->add_field( array(
       'name' => __( 'E-mail Address:', $domain ),
       'desc' => __( '<br>Subscription notifications will be sent to this email. If there is no email provided, admin email will be used.', $domain ),
@@ -469,7 +476,7 @@ class CcPopUpAdmin {
       'Month' => 'Month (Available in Pro)',
       'Year' => 'Year (Available in Pro)',
       );
-    printf( "<select class=\"cmb_select\" name=\"%s[]\" id=\"%s\" multiple=\"multiple\">", $field->args( '_name' ), $field->args( '_name' ) );
+    printf( "<select class=\"cmb_select\" name=\"%s\" id=\"%s\" >", $field->args( '_name' ), $field->args( '_name' ) );
     foreach ( $cookie_expire as $value => $title ):
       $selected = '';
       $disable = '';
@@ -504,7 +511,7 @@ class CcPopUpAdmin {
       'CampaingMonitor' => 'CampaingMonitor (Available in Pro)',
       );
 
-    printf( "<select class=\"cmb_select\" name=\"%s[]\" id=\"%s\">", $field->args( '_name' ), $field->args( '_name' ) );
+    printf( "<select class=\"cmb_select\" name=\"%s\" id=\"%s\">", $field->args( '_name' ), $field->args( '_name' ) );
 
     foreach ( $newsletter_expire as $value => $title ):
       $selected = '';
