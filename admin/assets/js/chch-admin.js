@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
 
 
   $('#_chch_pop_up_auto_closed').on('change', function() {
-    var target = $('.cmb_id__chch_pop_up_close_timer');
+    var target = $('.cmb2-id--chch-pop-up-close-timer');
 
     if ($(this).is(':checked')) {
       $(target).removeClass('hide-section');
