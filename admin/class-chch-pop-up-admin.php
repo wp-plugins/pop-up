@@ -53,9 +53,7 @@ class CcPopUpAdmin {
     add_filter( 'cmb2_render_chch_pu_cookie_select', array( $this, 'chch_pu_render_cookie_select' ), 10, 5 );
     add_filter( 'cmb2_render_chch_pu_newsletter_select', array( $this, 'chch_pu_render_newsletter_select' ), 10, 5 );
 
-    // remove help tabs
-    add_filter( 'contextual_help', array( $this, 'chch_pu_remove_help_tabs' ), 999, 3 );
-    add_filter( 'screen_options_show_screen', '__return_false' );
+     
 
     // Templates view
     add_action( 'edit_form_after_title', array( $this, 'chch_pu_templates_view' ) );
@@ -534,18 +532,7 @@ class CcPopUpAdmin {
 
   }
 
-  /**
-   * Remove help tabs from post view.
-   *
-   * @since     1.0.7
-   * 
-   */
-  function chch_pu_remove_help_tabs( $old_help, $screen_id, $screen ) {
-    if ( 'post' == $screen->base && 'chch-pop-up' === $screen->post_type ) {
-      $screen->remove_help_tabs();
-      return $old_help;
-    }
-  }
+   
 
   /**
    * Return list of templates
