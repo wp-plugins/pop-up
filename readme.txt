@@ -28,6 +28,12 @@ Pop-Up CC allows you to build elegant and professional pop-ups in a couple of mi
 Pop-Up CC is a perfect solution to capture the audience’s attention in the right time and place to build your mailing list.
 
 
+**An inside look:**
+
+
+https://www.youtube.com/watch?v=S2mXasp2pHg
+
+
 **Features:**
 
 
